@@ -7,8 +7,14 @@ body {
 header {
     background-color: red;
     color: white;
-    padding: 20px;
+    padding: 45px;
     text-align: center; /* Centrar el contenido del encabezado */
+}
+img{
+    width: 120px; /* Ancho deseado */
+    height: auto; 
+    float: left;
+    margin-top: -50px;
 }
 
 nav {
@@ -36,5 +42,41 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*-----------------------------*/
+/* FOOTER */
+/*--------------------------------*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul p {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer nav ul p a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer nav ul p a:hover {
     text-decoration: underline;
 }
