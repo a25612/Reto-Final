@@ -115,19 +115,17 @@ footer {
     width: 100%;
     background-color: red;
     color: white;
-    padding: 20px;
     text-align: center;
 }
 
 footer nav ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
 }
 
 footer nav ul p {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 footer nav ul p a {
@@ -138,4 +136,10 @@ footer nav ul p a {
 
 footer nav ul p a:hover {
     text-decoration: underline;
+}
+
+footer nav ul p img {
+    width: 40px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto;
+    margin-top: 30px;
 }
