@@ -1,8 +1,6 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+   /*-----------------------------*/
+/* HEADER */
+/*--------------------------------*/
 
 header {
     background-color: red;
@@ -43,43 +41,61 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
-}
+  }
 
 /*-----------------------------*/
-/* CARTA */
+/* BODY */
 /*--------------------------------*/
-.main-carta {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px; /* Espacio entre las columnas */
-    padding: 20px;
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 20px auto;
+}
+.tc{
+    margin: 20px auto;
+    max-width: 800px;
+}
+h1, h2 {
+    color: #ff0000;
+    margin-top: 30px;
 }
 
-/* Estilo para cada sección */
-section {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h1 {
+    font-size: 36px;
     text-align: center;
 }
 
-/* Ajusta el tamaño de las imágenes */
-.imagen1 img,
-.imagen2 img,
-.imagen3 img {
-    max-width: 100%;
-    height: auto;
+h2 {
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ol, ul {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+li {
     margin-bottom: 10px;
 }
 
-
-/*-----------------------------*/
+a:hover {
+    text-decoration: underline;
+}
+ /*-----------------------------*/
 /* FOOTER */
 /*--------------------------------*/
-
 footer {
     position: relative;
     bottom: 0;
@@ -111,7 +127,7 @@ footer nav ul p a:hover {
 }
 
 footer nav ul p img {
-    width: 40px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    width: 40px; 
     height: auto;
     margin-top: 30px;
 }
