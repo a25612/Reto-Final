@@ -1,13 +1,6 @@
   /*-----------------------------*/
 /* HEADER */
 /*--------------------------------*/
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
-
-}
 
 header {
     background-color: red;
@@ -50,14 +43,58 @@ nav ul li a:hover {
     text-decoration: underline;
   }
 
-  h1{
-    color: #ff0000;
-    text-align: center;
-  }
+/*-----------------------------*/
+/* BODY */
+/*--------------------------------*/
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
 
-  h2{
+h1, h2 {
     color: #ff0000;
-  }
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ol, ul {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
    /*-----------------------------*/
 /* FOOTER */
 /*--------------------------------*/
@@ -92,7 +129,7 @@ footer nav ul p a:hover {
 }
 
 footer nav ul p img {
-    width: 40px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    width: 40px; 
     height: auto;
     margin-top: 30px;
 }
