@@ -48,32 +48,6 @@ nav ul li a:hover {
 /*-----------------------------*/
 /* CARTA */
 /*--------------------------------*/
-.main-carta {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px; /* Espacio entre las columnas */
-    padding: 20px;
-}
-
-/* Estilo para cada sección */
-section {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-/* Ajusta el tamaño de las imágenes */
-.imagen1 img,
-.imagen2 img,
-.imagen3 img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
 
 
 /*-----------------------------*/
