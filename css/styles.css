@@ -7,18 +7,18 @@ body {
 header {
     background-color: red;
     color: white;
-    padding: 45px;
-    text-align: center; /* Centrar el contenido del encabezado */
+    padding: 52px;
+    text-align: center; 
 }
 img{
-    width: 120px; /* Ancho deseado */
+    width: 120px; 
     height: auto; 
     float: left;
     margin-top: -50px;
 }
 
 nav {
-    display: inline-block; /* Alinear el menú horizontalmente */
+    display: inline-block; 
 }
 
 nav ul {
@@ -30,9 +30,9 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 20px;
-    border: 3px solid white; /* Añadir borde alrededor de cada elemento de menú */
-    padding: 5px 10px; /* Espaciado interno */
-    border-radius: 0px; /* Bordes redondeados */
+    border: 3px solid white; 
+    padding: 5px 10px; 
+    border-radius: 0px; 
 }
 
 nav ul li a {
@@ -50,59 +50,6 @@ nav ul li a:hover {
 /* MAIN */
 /*--------------------------------*/
 
-.home-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-}
-
-.home-content {
-    display: flex;
-    align-items: center;
-    max-width: 800px;
-    margin-top: 30px;
-}
-
-.home-image {
-    flex: 1;
-}
-
-.home-image img {
-    width: 100%;
-    border-radius: 0; /* Aquí establecemos los bordes cuadrados */
-    border: 2px solid #ddd; /* Agregamos un borde alrededor de la imagen */
-}
-
-.home-text {
-    flex: 1;
-    padding: 0 20px;
-}
-
-.home-text h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.home-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.boton_pide {
-    display: inline-block;
-    background-color: #ff5733;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-left: 30px;
-}
-
-.boton_pide:hover {
-    background-color: #e65100;
-}
-
 #video-background {
     position:static ;
     right: 0;
@@ -116,9 +63,9 @@ nav ul li a:hover {
     bottom: 5;
     left: 0;
     width: 100%;
-    height: 118%;
-    background-color: rgba(0, 0, 0, 0.8); /* Color negro con opacidad del 50% /
-    z-index: 0; / Asegura que esté por encima del video pero detrás del contenido */
+    height: 120%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 0; 
 }
 
 
@@ -157,7 +104,7 @@ footer nav ul p a:hover {
 }
 
 footer nav ul p img {
-    width: 40px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    width: 40px; 
     height: auto;
     margin-top: 30px;
 }
