@@ -59,6 +59,8 @@ nav ul li a:hover {
 h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: 'Kanit';
+    color: rgb(226, 17, 17);
 }
 
 .item {
@@ -68,6 +70,23 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.item h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #333; /* Color del texto */
+}
+
+.item p {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #666; /* Color del texto */
+}
+
+.item p:last-child {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #000; /* Color del texto */
+}
 
 
 
