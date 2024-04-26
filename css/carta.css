@@ -59,9 +59,23 @@ nav ul li a:hover {
 }
 
 .seccion {
-    margin-bottom: 30px;
+    position: relative;
+    margin-right: 900px;
 }
 
+.seccion img {
+    position: absolute; /* Establecer la posición absoluta */
+    top: 0; /* Ajustar la posición desde la parte superior */
+    right: 0; /* Ajustar la posición desde la derecha */
+    transform: translate(-50%, 0); /* Centrar horizontalmente */
+    width: 400px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.seccion_2 {
+    position: relative; 
+    margin-left: 900px;
+}
 h2 {
     font-size: 24px;
     margin-bottom: 10px;
