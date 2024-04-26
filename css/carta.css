@@ -65,12 +65,21 @@ nav ul li a:hover {
 
 .seccion img {
     position: absolute; /* Establecer la posición absoluta */
-    top: 250px; /* Ajustar la posición desde la parte superior */
+    top: 175px; /* Ajustar la posición desde la parte superior */
+    right: -900px; /* Ajustar la posición desde la derecha */
+    transform: translate(-50%, 0); /* Centrar horizontalmente */
+    width: 500px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+.seccion img tarta{
+    position: absolute; /* Establecer la posición absoluta */
+    top: 280px; /* Ajustar la posición desde la parte superior */
     right: -900px; /* Ajustar la posición desde la derecha */
     transform: translate(-50%, 0); /* Centrar horizontalmente */
     width: 400px; /* Ancho de la imagen */
     height: auto; /* Altura automática para mantener la proporción */
 }
+
 
 .seccion_2 {
     position: relative; 
