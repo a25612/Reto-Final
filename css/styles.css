@@ -111,6 +111,24 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 0;
 }
+.moving-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    animation: moveText 10s linear infinite; /* Aquí se define la animación */
+}
+
+@keyframes moveText {
+    0% { left: 50%; } /* Posición inicial */
+    50% { left: 30%; } /* Mueve el texto hacia la izquierda */
+    100% { left: 50%; } /* Vuelve a la posición inicial */
+}
 
 /*-----------------------------*/
 /* FOOTER */
