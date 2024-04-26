@@ -122,7 +122,19 @@ h2 {
 .reto{
     text-align: center;
 }
+.reto button{
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
+.reto button:hover {
+    background-color: darkred;
+}
 
 
 /*-----------------------------*/
