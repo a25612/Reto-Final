@@ -1,25 +1,27 @@
 body {
-    background-image: url(/img/fondo_order.PNG);
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-image: url(/img/fondo_order.PNG);
 }
 
 header {
     background-color: red;
     color: white;
     padding: 52px;
-    text-align: center; 
+    text-align: center;
 }
-img{
-    width: 120px; 
-    height: auto; 
+
+img {
+    width: 120px;
+    height: auto;
     float: left;
     margin-top: -50px;
 }
 
 nav {
-    display: inline-block; 
+    display: inline-block;
+    
 }
 
 nav ul {
@@ -30,10 +32,10 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
-    border: 3px solid white; 
-    padding: 5px 10px; 
-    border-radius: 0px; 
+    margin-right: 100px;
+    border: 3px solid white;
+    padding: 5px 10px;
+    border-radius: 0px;
 }
 
 nav ul li a {
@@ -44,6 +46,9 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+
+
+
 }
 
 /*-----------------------------*/
