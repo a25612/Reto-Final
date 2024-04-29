@@ -112,8 +112,9 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 0;
 }
-/* Estilo para el contenedor del reto */
+
 .reto {
+    background-color: rgb(255, 255, 255);
     text-align: center;
     margin: 50px auto;
     padding: 20px;
@@ -121,13 +122,13 @@ nav ul li a:hover {
     max-width: 400px;
 }
 
-/* Estilo para el encabezado */
+
 .reto h1 {
     font-size: 24px;
-    color: #ffffff;
+    color: #ff0000;
 }
 
-/* Estilo para el botón */
+
 .reto button {
     background-color: red;
     color: white;
@@ -142,6 +143,13 @@ nav ul li a:hover {
 
 .reto button:hover {
     background-color: darkred;
+}
+
+.mapa h1{
+    background-color: #ff0000;
+    color: #ffffff;
+    text-align: center;
+
 }
 
 /*-----------------------------*/
