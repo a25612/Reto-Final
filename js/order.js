@@ -1,13 +1,15 @@
 function expandirRecuadro() {
     var recuadro = document.getElementById('recuadro');
     recuadro.classList.add('expanded');
-    document.getElementById('expansion').style.display = 'block'; 
+    document.getElementById('expansion').style.display = 'block';
+    document.getElementById('direccionInput').style.display = 'none'; // Oculta el desplegable de PICK UP
 }
 
 function recoger() {
     var recuadro = document.getElementById('recuadro');
-    recuadro.classList.remove('expanded');
-    document.getElementById('expansion').style.display = 'none'; 
+    recuadro.classList.add('expanded');
+    document.getElementById('expansion').style.display = 'none'; // Oculta el input de dirección
+    document.getElementById('direccionInput').style.display = 'block'; // Muestra el desplegable de PICK UP
 }
 
 function aceptarDireccion() {
