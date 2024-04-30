@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xene Burguer</title>
     <link rel="stylesheet" href="/css/order.css">
+    <script src="/js/order.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
 </head>
@@ -26,11 +27,15 @@
         </nav>
     </header>
     <main class="main-carta">
-        <div class="recuadro">
+        <div class="recuadro" id="recuadro">
             <h2>XENE IN YOUR HOUSE</h2>
             <div class="botones">
-                <button onclick="pedir()">ORDER</button>
+                <button onclick="expandirRecuadro()">ORDER</button>
                 <button onclick="recoger()">PICK UP</button>
+            </div>
+            <div id="expansion" style="display: none;">
+                <input type="text" id="direccion" class="direccion-input" placeholder="Enter your address">
+                <button onclick="aceptarDireccion()">Aceptar</button>
             </div>
         </div>
     </main>
