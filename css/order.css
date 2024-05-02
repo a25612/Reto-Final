@@ -21,6 +21,7 @@ img {
 
 nav {
     display: inline-block;
+    
 }
 
 nav ul {
@@ -31,7 +32,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 100px;
     border: 3px solid white;
     padding: 5px 10px;
     border-radius: 0px;
@@ -46,7 +47,6 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-
 /*-----------------------------*/
 /* ORDER */
 /*--------------------------------*/

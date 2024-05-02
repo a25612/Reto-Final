@@ -15,9 +15,8 @@ function recoger() {
 function aceptarDireccion() {
     var direccionInput = document.getElementById('direccion');
     var direccion = direccionInput.value.trim(); 
-
     var esPedidoADomicilio = document.getElementById('expansion').style.display !== 'none';
-    
+
     if (direccion === '' && esPedidoADomicilio) {
         alert('Por favor ingresa una dirección.');
         return; 
