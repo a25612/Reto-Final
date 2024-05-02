@@ -79,6 +79,7 @@ nav ul li a:hover {
 .seccion_2 img {
     position: absolute; /* Establecer la posición absoluta */
     top: 175px; /* Ajustar la posición desde la parte superior */
+    right: 1400px;
     width: 500px; /* Ancho de la imagen */
     height: auto; /* Altura automática para mantener la proporción */
 }
