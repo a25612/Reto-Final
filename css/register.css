@@ -60,9 +60,7 @@ body {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-family: "Jura", sans-serif;
 }
 
@@ -82,7 +80,7 @@ body {
 .form-group label {
     display: block;
     font-weight: bold;
-    color: #555;
+    color: #ffffff;
 }
 
 input[type="text"],
@@ -92,9 +90,7 @@ input[type="email"] {
     width: calc(100% - 24px);
     padding: 10px 12px;
     margin-top: 5px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus,
@@ -102,15 +98,15 @@ input[type="password"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus {
     outline: none;
-    border-color: #FF4B2B;
+    border-color: darkred;
 }
 
 button {
     width: 100%;
     padding: 12px 0;
     border: none;
-    border-radius: 20px;
-    background-color: #FF4B2B;
+    border-radius: 5px;
+    background-color: #ff2600;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
@@ -121,8 +117,11 @@ button {
 }
 
 button:hover {
-    background-color: #FF6A57;
+    background-color: darkred;
 }
+p, h2 {
+    color: #ffffff;
+  }
 
  /*-----------------------------*/
 /* FOOTER */

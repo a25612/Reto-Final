@@ -98,29 +98,27 @@ h2 {
 }
 
 .item {
-
     padding: 20px;
     font-family: "Jura", sans-serif;;
-    
 }
 
 .item h3 {
     margin-top: 0;
     font-size: 22px;
-    color: #ff0000; /* Color del texto */
+    color: #ff0000; 
 
 }
 
 .item p {
     margin-bottom: 5px;
     font-size: 16px;
-    color: #ffffff; /* Color del texto */
+    color: #ffffff; 
 }
 
 .item p:last-child {
     margin-bottom: 0;
     font-weight: bold;
-    color: #ffffff; /* Color del texto */
+    color: #ffffff; 
 }
 .reto{
     text-align: center;
