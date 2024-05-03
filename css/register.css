@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Jura", sans-serif;
     background-image: url(/img/Sin\ título.png);
 }
 
@@ -10,6 +10,7 @@ header {
     color: white;
     padding: 52px;
     text-align: center;
+    font-family: "Jura", sans-serif;
 }
 
 img {
@@ -62,6 +63,7 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Jura", sans-serif;
 }
 
 .container form {
@@ -70,6 +72,7 @@ body {
 
 .container h2 {
     margin-bottom: 20px;
+    font-family: "Jura", sans-serif;
 }
 
 .form-group {
@@ -114,6 +117,7 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: "Jura", sans-serif;
 }
 
 button:hover {
@@ -131,6 +135,7 @@ footer {
     background-color: red;
     color: white;
     text-align: center;
+    font-family: "Jura", sans-serif;
 }
 
 footer nav ul {

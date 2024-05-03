@@ -10,6 +10,7 @@ header {
   color: white;
   padding: 52px;
   text-align: center;
+  font-family: "Jura", sans-serif;
 }
 
 img {
@@ -53,7 +54,7 @@ nav ul li a:hover {
 
 body {
   background-color: #f6f5f7;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Jura", sans-serif;
 }
 
 .container {
@@ -71,6 +72,7 @@ body {
 
 .container h2 {
   margin-bottom: 20px;
+  font-family: "Jura", sans-serif;
 }
 
 .form-group {
@@ -113,6 +115,7 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: "Jura", sans-serif;
 }
 
 button:hover {
@@ -130,6 +133,7 @@ footer {
   background-color: red;
   color: white;
   text-align: center;
+  font-family: "Jura", sans-serif;
 }
 
 footer nav ul {
