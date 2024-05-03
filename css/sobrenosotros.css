@@ -54,27 +54,131 @@ nav ul li a:hover {
 /* ABOUT-US */
 /*--------------------------------*/
 .main-aboutus {
+    font-family: "Jura";
     background-image: url('/img/burguer-about-us.jpg');
     background-size: cover; 
     background-position: center; 
-    padding: 115px;
+    padding: 144px;
     background-color: #f9f9f9;
     text-align: center;
+    position: relative;
+}
+
+.main-aboutus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /
+}
+
+.main-aboutus h2,
+.main-aboutus p {
+    position: relative; 
+    z-index: 1; 
 }
 
 .main-aboutus h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     font-size: 36px;
     color: #ffffff;
     margin-bottom: 30px;
 }
 
 .main-aboutus p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.join-team{
+    font-family: "Jura";
+    background-size: cover; 
+    background-position: center; 
+    padding: 144px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.join-team h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.join-team p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     font-size: 18px;
     line-height: 1.6;
     color: #ffffff;
     margin-bottom: 20px;
 }
 
+.separator {
+    border: 0;
+    border-top: 2px solid #ff0000; 
+    margin: 40px 0; 
+    z-index: 1;
+    position: relative;
+}
+
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="file"] {
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #b90e0e;
+}
 
 
 /*-----------------------------*/
@@ -82,7 +186,7 @@ nav ul li a:hover {
 /*--------------------------------*/
 
 footer {
-    position: absolute;
+    position: static;
     bottom: 0;
     left: 0;
     width: 100%;
