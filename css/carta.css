@@ -1,3 +1,5 @@
+
+
 body {
     margin: 0;
     padding: 0;
@@ -88,34 +90,36 @@ h2 {
     margin-bottom: 10px;
     font-family: 'Kanit';
     color: rgb(226, 17, 17);
-    background-color: #f9f9f9;
+    background-color: #000000;
     display: inline-block;
     padding: 5px 10px;
     border: 2px solid rgb(226, 17, 17);
 }
 
 .item {
-    background-color: #f9f9f9;
+
     padding: 20px;
+    font-family: "Jura", sans-serif;;
     
 }
 
 .item h3 {
     margin-top: 0;
     font-size: 22px;
-    color: #333; /* Color del texto */
+    color: #ff0000; /* Color del texto */
+
 }
 
 .item p {
     margin-bottom: 5px;
     font-size: 16px;
-    color: #666; /* Color del texto */
+    color: #ffffff; /* Color del texto */
 }
 
 .item p:last-child {
     margin-bottom: 0;
     font-weight: bold;
-    color: #000; /* Color del texto */
+    color: #ffffff; /* Color del texto */
 }
 .reto{
     text-align: center;
