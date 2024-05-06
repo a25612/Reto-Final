@@ -120,6 +120,21 @@ h2 {
     font-weight: bold;
     color: #ffffff; 
 }
+.carrito{
+    background-color: red;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jura", sans-serif;
+  }
+
+.carrito button:hover{
+    background-color: darkred;
+}
+
 .reto{
     text-align: center;
 }
