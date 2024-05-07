@@ -121,6 +121,9 @@ button:hover {
 p, h2 {
   color: #ffffff;
 }
+.container a{
+  color: #f6f5f7;
+}
 
   /*-----------------------------*/
 /* FOOTER */
