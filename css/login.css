@@ -68,6 +68,7 @@ body {
 .container h2 {
   margin-bottom: 20px;
   font-family: "Jura", sans-serif;
+  text-align: center;
 }
 
 .form-group {
@@ -83,8 +84,8 @@ body {
 input[type="text"],
 input[type="password"],
 input[type="tel"] {
-  width: calc(100% - 24px);
-  padding: 10px 12px;
+  margin: auto;
+  padding: 10px 115px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;

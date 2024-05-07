@@ -91,10 +91,10 @@ h2 {
     margin-bottom: 10px;
     color: rgb(226, 17, 17);
     background-color: #000000;
-    display: inline-block;
     padding: 5px 10px;
     border: 2px solid rgb(226, 17, 17);
     font-family: "Jura", sans-serif;
+    text-align: center;
 }
 
 .item {
