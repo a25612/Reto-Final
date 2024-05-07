@@ -114,6 +114,18 @@ nav ul li a:hover {
     height: 100%;
     z-index: 0;
 }
+.main-images {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+}
+
+.main-images img {
+    width: 60%;
+    height: auto;
+    margin-top: 1%;
+}
+
 .reto {
     background-color: rgb(255, 255, 255);
     text-align: center;
@@ -123,14 +135,12 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-
 .reto h1 {
     font-size: 24px;
     color: #ff0000;
     font-family: "Jura", sans-serif;
     
 }
-
 
 .reto button {
     background-color: red;
@@ -148,6 +158,8 @@ nav ul li a:hover {
 .reto button:hover {
     background-color: darkred;
 }
+
+
 .container {
     display: flex;
     justify-content: space-between;
