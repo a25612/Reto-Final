@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xene Burguer</title>
     <link rel="stylesheet" href="/css/carta.css">
+    <script src="/js/carta.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
     <link rel="icon" type="image/x-icon" href="/img/Logo.png">
@@ -35,30 +36,32 @@
                     <h3>HAUSER BURGUER🔥</h3>
                     <p>DOUBLE SMASH BURGER, CRUNCHY BACON, CHEDDAR, PICKLE AND XENE SAUCE ACCOMPANIED WITH A BRIOCHE
                         BREAD BUN (LITTLE SPICY)</p>
-                    <p>7,50€ <button class="carrito">+</button></p>
+                    <p>7,50€ <button class="carrito" onclick="addToCart(this)">+</button><span class="counter">0</span>
+                    </p>
                 </div>
                 <div class="item">
                     <h3>WITTZ BURGER​</h3>
                     <p>GRILLED MINCED MEAT WITH BACON BITS, CRUNCHY ONION AND AMERICAN CHEESE, ACCOMPANIED BY XENE
                         BARBECUE SAUCE.</p>
-                    <p>8,50€ <button class="carrito">+</button></p>
+                    <p>8,50€ <button class="carrito" onclick="addToCart(this)">+</button><span class="counter">0</span>
+                    </p>
                 </div>
             </div>
             <div class="item">
                 <h3>ZOHEN BURGUER</h3>
                 <p>DOUBLE BEEF SMASH, BACON & CHEESE FRIES AND CHEDDAR CHEESE ON BRIOCHE-STYLE BREAD.</p>
-                <p>8,50€ <button class="carrito">+</button></p>
+                <p>8,50€ <button class="carrito" onclick="addToCart(this)">+</button><span class="counter">0</span></p>
             </div>
             <div class="item">
                 <h3>NERO BURGUER</h3>
                 <p>FRESH ROMAINE LETTUCE TOSSED IN CREAMY CAESAR DRESSING, TOPPED WITH PARMESAN CHEESE AND SEASONED
                     CROUTONS.</p>
-                <p>8,50€ <button class="carrito">+</button></p>
+                <p>8,50€ <button class="carrito" onclick="addToCart(this)">+</button><span class="counter">0</span></p>
                 <img src="/img/h1-removebg-preview.png" alt="beef">
             </div>
             </div>
         </section>
-    
+
         <section class="seccion_2">
             <h2>CHICKEN BURGUERS</h2>
             <div class="menu-item">
@@ -66,7 +69,7 @@
                     <h3>KORMER BURGER</h3>
                     <p>THE ESSENTIAL BURGER FOR CRISPY CHICKEN LOVERS, ENJOY THE CRISPY CHICKEN, WITH BACON, EDAM
                         CHEESE, ONION AND BARBECUE SAUCE, IN A DOUBLE VERSION.</p>
-                    <p>8,50€ <button class="carrito">+</button></p> 
+                    <p>8,50€ <button class="carrito">+</button></p>
                 </div>
                 <div class="item">
                     <h3>KIBURN BURGER🔥</h3>
@@ -88,7 +91,7 @@
                 </div>
             </div>
         </section>
-    
+
         <section class="seccion">
             <h2>SPECIAL BURGERS</h2>
             <div class="menu-item">
@@ -140,7 +143,8 @@
                 </div>
                 <div class="item">
                     <h3>TORCH NACHOS🔥🔥</h3>
-                    <p>DELICIOUS NACHOS TOPPED WITH JUICY PULLED PORK, GENEROUS LAYERS OF MELTED CHEESE AND XENE SAUCE(MEDIUM SPICY).
+                    <p>DELICIOUS NACHOS TOPPED WITH JUICY PULLED PORK, GENEROUS LAYERS OF MELTED CHEESE AND XENE
+                        SAUCE(MEDIUM SPICY).
                     </p>
                     <p>7,50€ <button class="carrito">+</button></p>
                     <img src="/img/cr-removebg-preview.png" alt="">
@@ -185,6 +189,7 @@
                     <p><button onclick="window.location.href='/html/reto.html'">TRY</button></p>
                 </div>
             </div>
+        </section>
     </main>
     <footer>
         <nav>
