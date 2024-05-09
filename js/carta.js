@@ -1,39 +1,47 @@
-function addToCart(button) {
-    var counterContainer = button.parentNode;
-    var counterElement = counterContainer.querySelector('.counter');
-    var currentCount = parseInt(counterElement.innerText) || 0; // Si es nulo, establece el valor predeterminado a 0
-    var newCount = currentCount + 1;
+var carrito = []; // Array para almacenar los productos
+var total = 0; // Variable para almacenar el total del carrito
 
-    // Actualiza el contador
-    counterElement.innerText = newCount;
-
-    // Muestra u oculta el contador según sea necesario
-    if (newCount > 0) {
-        counterElement.style.display = 'inline-block';
+// Función para mostrar el carrito si hay elementos en él
+function mostrarCarrito() {
+    var carritoCampo = document.getElementById('carritoCampo');
+    if (carrito.length > 0) {
+        carritoCampo.style.display = 'block';
     } else {
-        counterElement.style.display = 'none';
+        carritoCampo.style.display = 'none';
     }
+}
 
-    var minusButton = counterContainer.querySelector('.minus-button');
-    if (!minusButton) {
-        minusButton = document.createElement('button');
-        minusButton.classList.add('minus-button');
-        minusButton.innerText = '-';
-        minusButton.onclick = function () {
-            var currentCount = parseInt(counterElement.innerText);
-            if (currentCount > 0) {
-                var newCount = currentCount - 1;
-                counterElement.innerText = newCount;
+// Función para agregar un producto al carrito
+function addToCart(nombre, precio) {
+    carrito.push({nombre: nombre, precio: precio});
+    total += precio;
+    renderCarrito();
+    mostrarCarrito();
+}
 
-                // Muestra u oculta el contador según sea necesario
-                if (newCount > 0) {
-                    counterElement.style.display = 'inline-block';
-                } else {
-                    counterElement.style.display = 'none';
-                    minusButton.style.display = 'none'; // Oculta el botón de resta cuando el contador es cero
-                }
-            }
-        };
-        counterContainer.appendChild(minusButton);
-    }
+// Función para renderizar el carrito
+function renderCarrito() {
+    var listaCarrito = document.getElementById('listaCarrito');
+    var totalCarrito = document.getElementById('totalCarrito');
+    
+    // Limpiar la lista del carrito antes de renderizarla nuevamente
+    listaCarrito.innerHTML = '';
+    
+    // Recorrer el array de productos y agregar cada uno a la lista del carrito
+    carrito.forEach(function(producto) {
+        var listItem = document.createElement('li');
+        listItem.textContent = producto.nombre + ' - $' + producto.precio;
+        listaCarrito.appendChild(listItem);
+    });
+    
+    // Mostrar el total del carrito
+    totalCarrito.textContent = '$' + total.toFixed(2);
+}
+
+// Función para vaciar el carrito
+function vaciarCarrito() {
+    carrito = [];
+    total = 0;
+    renderCarrito();
+    mostrarCarrito();
 }

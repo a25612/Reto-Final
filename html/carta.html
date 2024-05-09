@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -25,9 +26,18 @@
                 <li><a href="#contactanos">CONTACT</a></li>
                 <li><a href="/html/login.html">LOG IN</a></li>
                 <li><a href="#carrito">CARRITO</a></li>
+
             </ul>
         </nav>
     </header>
+    <div id="carritoCampo">
+        <h2>Carrito</h2>
+        <ul id="listaCarrito">
+            <!-- Aquí se agregarán los elementos del carrito dinámicamente -->
+        </ul>
+        <p><span id="totalCarrito">Total: $0.00</span></p>
+        <button class="botoncarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </div>
     <main class="main-carta">
         <section class="seccion">
             <h2>BEEF BURGERS</h2>
@@ -35,29 +45,29 @@
                 <div class="item">
                     <h3>HAUSER BURGUER🔥</h3>
                     <p>DOUBLE SMASH BURGER, CRUNCHY BACON, CHEDDAR, PICKLE AND XENE SAUCE ACCOMPANIED WITH A BRIOCHE
-                        BREAD BUN (LITTLE SPICY)</p>
-                    <p>7,50€ <button class="carrito" onclick="addToCart(this)">+</button><span class="counter">0</span>
+                        BREAD BUN (LITTLE SPICY) 7,50€</p>
+                    <p>7,50€ <button class="carrito" onclick="addToCart('HAUSER BURGUER', 7.50)">+</button>
                     </p>
                 </div>
                 <div class="item">
                     <h3>WITTZ BURGER​</h3>
                     <p>GRILLED MINCED MEAT WITH BACON BITS, CRUNCHY ONION AND AMERICAN CHEESE, ACCOMPANIED BY XENE
                         BARBECUE SAUCE.</p>
-                    <p>8,50€ <button class="carrito" onclick="addToCart(this)">+</button><span class="counter">0</span>
+                    <p>8,50€ <button class="carrito" onclick="addToCart('WITTZ BURGER', 8.50)">+</button>
                     </p>
                 </div>
             </div>
             <div class="item">
                 <h3>ZOHEN BURGUER</h3>
                 <p>DOUBLE BEEF SMASH, BACON & CHEESE FRIES AND CHEDDAR CHEESE ON BRIOCHE-STYLE BREAD.</p>
-                <p>8,50€ <button class="carrito" onclick="addToCart(this)">+</button><span class="counter">0</span></p>
+                <p>8,50€ <button class="carrito" onclick="addToCart('ZOHEN BURGUER', 8.50)">+</button>
             </div>
             <div class="item">
                 <h3>NERO BURGUER</h3>
                 <p>FRESH ROMAINE LETTUCE TOSSED IN CREAMY CAESAR DRESSING, TOPPED WITH PARMESAN CHEESE AND SEASONED
                     CROUTONS.</p>
-                <p>8,50€ <button class="carrito" onclick="addToCart(this)">+</button><span class="counter">0</span></p>
-                <img src="/img/h1-removebg-preview.png" alt="beef">
+                <p>8,50€ <button class="carrito" onclick="addToCart('NERO BURGUER', 8.50)">+</button>
+                    <img src="/img/h1-removebg-preview.png" alt="beef">
             </div>
             </div>
         </section>
@@ -69,24 +79,24 @@
                     <h3>KORMER BURGER</h3>
                     <p>THE ESSENTIAL BURGER FOR CRISPY CHICKEN LOVERS, ENJOY THE CRISPY CHICKEN, WITH BACON, EDAM
                         CHEESE, ONION AND BARBECUE SAUCE, IN A DOUBLE VERSION.</p>
-                    <p>8,50€ <button class="carrito">+</button></p>
+                        <p>8,50€ <button class="carrito" onclick="addToCart('KORMER BURGER', 8.50)">+</button>
                 </div>
                 <div class="item">
                     <h3>KIBURN BURGER🔥</h3>
                     <p>BRIOCHE BREAD, CRISPY FRIED CHICKEN, SWEET CHILLI, XENE SAUCE, PICKLES, AMERICAN CHEESE AND FRESH
                         LETTUCE (LITTLE SPICY)</p>
-                    <p>8,50€ <button class="carrito">+</button></p>
+                        <p>8,50€ <button class="carrito" onclick="addToCart('KIBURN BURGER', 8.50)">+</button>
                 </div>
                 <div class="item">
                     <h3>KIWILL BURGER</h3>
                     <p>CRISPY CHICKEN, CHIPOTLE BBQ SAUCE ON TOMATO, LETTUCE, PICKLE AND BACON SAUCE ON TOASTED BRIOCHE
                         BREAD WITH TWO SESAME SEEDS.</p>
-                    <p>8,50€ <button class="carrito">+</button></p>
+                        <p>8,50€ <button class="carrito" onclick="addToCart('KIWILL BURGER', 8.50)">+</button>
                 </div>
                 <div class="item">
                     <h3>BELLATRIX BURGER</h3>
                     <p>GRILLED CHICKEN BREAST SERVED ON A TOASTED BUN WITH LETTUCE, TOMATO, AND AVOCADO AIOLI.</p>
-                    <p>8,50€ <button class="carrito">+</button></p>
+                    <p>8,50€ <button class="carrito" onclick="addToCart('BELLATRIX BURGER', 8.50)">+</button>
                     <img src="/img/h2-removebg-preview.png" alt="beef">
                 </div>
             </div>
