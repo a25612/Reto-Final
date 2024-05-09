@@ -130,6 +130,7 @@ nav ul li a:hover {
     text-align: center;
     margin: 50px auto;
     padding: 20px;
+    margin-right: -20px;
 }
 
 .menu h1 {
