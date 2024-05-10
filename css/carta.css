@@ -48,8 +48,10 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 
+}
 
-
+#carritoCampo {
+    display: none;
 }
 
 /*-----------------------------*/
@@ -66,7 +68,7 @@ nav ul li a:hover {
 
 .seccion img {
     position: absolute;
-    top: 175px;
+    top: 60px;
     right: -700px;
     width: 500px;
     height: auto;
@@ -79,9 +81,9 @@ nav ul li a:hover {
 
 .seccion_2 img {
     position: absolute;
-    top: 175px;
-    right: 1300px;
-    width: 500px;
+    top: 200px;
+    right: 1200px;
+    width: 550px;
     height: auto;
 }
 

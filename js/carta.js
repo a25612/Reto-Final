@@ -2,6 +2,7 @@
 var carrito = []; // Array para almacenar los productos
 var total = 0; // Variable para almacenar el total del carrito
 
+
 // Función para mostrar el carrito si hay elementos en él
 function mostrarCarrito() {
     var carritoCampo = document.getElementById('carritoCampo');
@@ -17,7 +18,7 @@ function addToCart(nombre, precio) {
     carrito.push({ nombre: nombre, precio: precio });
     total += precio;
     renderCarrito();
-    mostrarCarrito();
+    mostrarCarrito(); // Solo se llama cuando se agrega un producto
 }
 
 // Función para renderizar el carrito
