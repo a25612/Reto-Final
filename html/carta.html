@@ -24,8 +24,7 @@
                 <li><a href="#pide">ORDER</a></li>
                 <li><a href="#contactanos">CONTACT</a></li>
                 <li><a href="/html/login.html">LOG IN</a></li>
-                <li><a href="#carrito">CARRITO</a></li>
-
+                <li><a href="#carrito" onclick="toggleCarrito()">CARRITO</a></li>
             </ul>
         </nav>
     </header>
@@ -37,9 +36,17 @@
         </ul>
         <p><span id="totalCarrito">Total: $0.00</span></p>
         <button class="botoncarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <button class="botoncarrito" onclick="pagar()">Pagar</button>
     </div>
+    <div id="menuCategorias">
+        <h2><a href="#" onclick="scrollToSection('beef')">BEEF BURGERS</a></h2>
+        <h2><a href="#" onclick="scrollToSection('chicken')">CHICKEN BURGERS</a></h2>
+        <h2><a href="#" onclick="scrollToSection('special')">SPECIAL BURGERS</a></h2>
+        <h2><a href="#" onclick="scrollToSection('sides')">SIDES</a></h2>
+        <h2><a href="#" onclick="scrollToSection('desserts')">DESSERTS</a></h2>
+    </div>       
     <main class="main-carta">
-        <section class="seccion">
+        <section id="beef" class="seccion">
             <h2>BEEF BURGERS</h2>
             <div class="menu-item">
                 <div class="item">
@@ -72,7 +79,7 @@
             </div>
         </section>
 
-        <section class="seccion_2">
+        <section id="chicken" class="seccion_2">
             <h2>CHICKEN BURGUERS</h2>
             <div class="menu-item">
                 <div class="item">
@@ -102,7 +109,7 @@
             </div>
         </section>
 
-        <section class="seccion">
+        <section id="special" class="seccion">
             <h2>SPECIAL BURGERS</h2>
             <div class="menu-item">
                 <div class="item">
@@ -131,7 +138,7 @@
                 </div>
             </div>
         </section>
-        <section class="seccion_2">
+        <section id="sides" class="seccion_2">
             <h2>SIDERS</h2>
             <div class="menu-item">
                 <div class="item">
@@ -161,7 +168,7 @@
                 </div>
             </div>
         </section>
-        <section class="seccion">
+        <section id="desserts" class="seccion">
             <h2>DESSERTS</h2>
             <div class="menu-item">
                 <div class="item">
@@ -185,18 +192,7 @@
                     <p>CLASSIC ITALIAN DESSERT MADE WITH LAYERS OF ESPRESSO-SOAKED LADYFINGERS, MASCARPONE CHEESE, AND
                         COCOA POWDER.</p>
                     <p>6,50€ <button class="carrito" onclick="addToCart('GAIA TIRAMISU', 6.50)">+</button>
-                        <img src="/img/lakasa_tarta_de_queso_azul-removebg-preview.png" alt="beef">
-                </div>
-            </div>
-        </section>
-        <section class="reto">
-            <h2>OUR CHALLENGE</h2>
-            <div class="menu-item">
-                <div class="item">
-                    <h3> GENESIS CHALLENGE BURGUER</h3>
-                    <p>5 KILO TITANESQUE BURGER</p>
-                    <p>50€</p>
-                    <p><button onclick="window.location.href='/html/reto.html'">TRY</button></p>
+                        <img src="/img/lakasa_tarta_de_queso_azul-removebg-preview.png" class="tarta">
                 </div>
             </div>
         </section>
