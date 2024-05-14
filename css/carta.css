@@ -233,10 +233,10 @@ h2 button {
 #listaCarrito li {
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 #listaCarrito span {
@@ -269,7 +269,7 @@ h2 button {
     font-family: "Jura"; 
     text-align: center; 
     display: inline-block; 
-    margin-right: 30px; 
+    margin-right: 100px; 
 }
 
 #menuCategorias h2 a {
