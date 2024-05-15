@@ -92,19 +92,26 @@ function vaciarCarrito() {
 
 var carritoVisible = true; // Variable para controlar la visibilidad del carrito
 
-// Función para alternar la visibilidad del carrito
-// Función para alternar la visibilidad del carrito
+// Función para alternar la visibilidad del carrito y su contenedor
 function toggleCarrito() {
     var carritoCampo = document.getElementById('carritoCampo');
-    if (carritoCampo.style.display === 'block') {
-        carritoCampo.style.display = 'none'; // Ocultar el carrito si ya está visible
+    var carritoContenedor = document.getElementById('carritoContenedor');
+    
+    if (carritoVisible) {
+        carritoCampo.style.display = 'none'; // Ocultar el carrito
+        carritoContenedor.style.display = 'none'; // Ocultar el contenedor del carrito
     } else {
-        carritoCampo.style.display = 'block'; // Mostrar el carrito si está oculto
+        carritoCampo.style.display = 'block'; // Mostrar el carrito
+        carritoContenedor.style.display = 'block'; // Mostrar el contenedor del carrito
     }
+    
+    carritoVisible = !carritoVisible; // Cambiar el estado de la variable
 }
+
 
 // Función para que se desplace suavemente hasta la seccion seleccionada
 function scrollToSection(sectionId) {
     var section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
 }
+

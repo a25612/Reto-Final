@@ -28,15 +28,17 @@
             </ul>
         </nav>
     </header>
-    <div id="carritoCampo">
-        <h2>
-            <button onclick="toggleCarrito()">Carrito</button>
-        </h2>
-        <ul id="listaCarrito">
-        </ul>
-        <p><span id="totalCarrito">Total: $0.00</span></p>
-        <button class="botoncarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
-        <button class="botoncarrito" onclick="pagar()">Pagar</button>
+    <div id="carritoContenedor">
+        <div id="carritoCampo">
+            <h2>
+                <button onclick="toggleCarrito()">Carrito</button>
+            </h2>
+            <ul id="listaCarrito">
+            </ul>
+            <p><span id="totalCarrito">Total: $0.00</span></p>
+            <button class="botoncarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+            <button class="botoncarrito" onclick="pagar()">Pagar</button>
+        </div>
     </div>
     <div id="menuCategorias">
         <h2><a href="#" onclick="scrollToSection('beef')">BEEF BURGERS</a></h2>
@@ -44,7 +46,7 @@
         <h2><a href="#" onclick="scrollToSection('special')">SPECIAL BURGERS</a></h2>
         <h2><a href="#" onclick="scrollToSection('sides')">SIDES</a></h2>
         <h2><a href="#" onclick="scrollToSection('desserts')">DESSERTS</a></h2>
-    </div>       
+    </div>
     <main class="main-carta">
         <section id="beef" class="seccion">
             <h2>BEEF BURGERS</h2>
