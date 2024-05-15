@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Jura", sans-serif;
     text-align: center;
     background-color: #ff0000;
     color: #ffffff;
@@ -10,7 +10,7 @@ body {
     margin: 0;
 }
 
-.container {
+.pago {
     background-color: #ff0000;
     padding: 30px;
     border-radius: 10px;
@@ -27,6 +27,7 @@ p {
 }  
 
 .boton {
+    font-family: "Jura", sans-serif;
     background-color: rgb(255, 0, 0);
     color: white;
     border: none;
