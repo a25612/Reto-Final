@@ -12,6 +12,7 @@ function mostrarCarrito() {
 }
 
 // Función para agregar un producto al carrito
+// Función para agregar un producto al carrito
 function addToCart(nombre, precio) {
     var index = carrito.findIndex(producto => producto.nombre === nombre);
     if (index !== -1) {
@@ -21,6 +22,9 @@ function addToCart(nombre, precio) {
     }
     total += precio;
     renderCarrito();
+    if (!carritoVisible) {
+        toggleCarrito(); // Mostrar el carrito si está minimizado
+    }
     mostrarCarrito(); // Solo se llama cuando se agrega un producto
 }
 
