@@ -37,7 +37,7 @@ function renderCarrito() {
         var listItem = document.createElement('li');
         
         var nombreProducto = document.createElement('span'); // Nombre del producto
-        nombreProducto.textContent = producto.nombre + ' - '; // Establece el nombre del producto
+        nombreProducto.textContent = producto.nombre; // Establece el nombre del producto
         listItem.appendChild(nombreProducto);
         
         var buttonLess = document.createElement('button');
