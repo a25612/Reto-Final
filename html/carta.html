@@ -37,7 +37,7 @@
             </ul>
             <p><span id="totalCarrito">Total: $0.00</span></p>
             <button class="botoncarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
-            <button class="botoncarrito" onclick="pagar()">Pagar</button>
+            <button class="botoncarrito" onclick="pagarCarrito()">Pagar</button>
         </div>
     </div>
     <div id="menuCategorias">
@@ -46,6 +46,7 @@
         <h2><a href="#" onclick="scrollToSection('special')">SPECIAL BURGERS</a></h2>
         <h2><a href="#" onclick="scrollToSection('sides')">SIDES</a></h2>
         <h2><a href="#" onclick="scrollToSection('desserts')">DESSERTS</a></h2>
+        <h2><a href="#" onclick="scrollToSection('drinks')">DRINKS</a></h2>
     </div>
     <main class="main-carta">
         <section id="beef" class="seccion">
@@ -198,6 +199,38 @@
                 </div>
             </div>
         </section>
+        <section id="drinks" class="seccion_2">
+            <h2>DRINKS</h2>
+            <div class="menu-item">
+                <div class="item">
+                    <h3>WATER</h3>
+                    <p>2,50€ <button class="carrito" onclick="addToCart('WATER', 2.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>COCACOLA</h3>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('COCACOLA' , 3.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>FANTA</h3>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('FANTA', 3.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>NESTEA</h3>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('NESTEA', 3.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>AQUARIUS</h3>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('AQUARIUS', 3.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>AMBAR BEER</h3>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('BEER', 3.50)">+</button>
+                </div>
+                        <img src="/img/refrescos.png" alt="">
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer>
         <nav>

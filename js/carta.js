@@ -119,3 +119,12 @@ function scrollToSection(sectionId) {
     section.scrollIntoView({ behavior: 'smooth' });
 }
 
+// Funcion para que el pedido minimo sea de 15€
+function pagarCarrito() {
+    if (total >= 15) {
+        // Se redirigira a la página de pago
+        window.location.href = "/html/pago.html";
+    } else {
+        alert('El total del pedido debe ser al menos 15€ para poder continuar');
+    }
+}
