@@ -356,9 +356,104 @@ footer nav ul p img {
 
 @media only screen and (max-width: 768px) {
     header {
-        padding: 10ipx; 
+        padding: 10px;
     }
+
+    header img {
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
     nav ul li {
-        margin-right: 30px; 
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    .main h1, .main h2, .menu h1, .map h1, .map h2 {
+        text-align: center;
+    }
+
+    .main-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-images img {
+        width: 80%;
+    }
+
+    .menu {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map, .image {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    .seccion, .seccion_2 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .seccion img, .seccion_2 img {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .linkimages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .linkimages img {
+        width: 80px;
+        margin: 10px 0;
+    }
+
+    footer nav ul p {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer .row a i {
+        font-size: 1.5em;
+    }
+
+    /* Center paragraphs and h2 elements on small screens */
+    p,
+    h2 {
+        text-align: center;
     }
 }
