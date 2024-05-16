@@ -289,6 +289,14 @@ footer nav ul p img {
         padding: 20px;
     }
 
+    img {
+        width: 80px;
+        margin-top: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     nav ul {
         display: flex;
         flex-direction: column;
@@ -296,16 +304,26 @@ footer nav ul p img {
     }
 
     nav ul li {
+        display: block;
         margin-bottom: 10px;
         margin-right: 0;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
     }
 
     .main h1 {
         font-size: 2em;
+        top: 20%;
+        text-align: center;
     }
 
     .main button {
         font-size: 1em;
+        top: 35%;
         padding: 8px 16px;
     }
 
@@ -318,21 +336,65 @@ footer nav ul p img {
         width: 80%;
     }
 
+    .menu {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .menu h1 {
+        text-align: center;
+    }
+
     .container {
         flex-direction: column;
+        align-items: center;
     }
 
     .map, .image {
         flex: 1 1 100%;
         margin: 10px 0;
+        width: 90%;
+    }
+
+    .map h1, .map h2, .menu h1 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .image img {
+        width: 90%;
+        margin-left: 0;
     }
 
     .linkimages {
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .linkimages img {
         width: 80px;
         margin: 10px 0;
+    }
+
+    footer nav ul p {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer .row a i {
+        font-size: 1.5em;
+    }
+
+    /* Center paragraphs and h2 elements on small screens */
+    p,
+    h2 {
+        text-align: center;
     }
 }
