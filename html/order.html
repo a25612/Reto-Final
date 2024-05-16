@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xene Burguer</title>
-    <link rel="stylesheet" href="/css/carta.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/order.css">
+    <script src="/js/order.js"></script>
     <link rel="icon" type="image/x-icon" href="/img/Logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
 </head>
 
 <body>
@@ -19,15 +21,31 @@
             <ul>
                 <li><a href="/html/carta.html">MENU</a></li>
                 <li><a href="/html/order.html">ORDER</a></li>
-                <li><a href="#contactanos">CONTACT</a></li>
+                <li><a href="/html/sobrenosotros.html">ABOUT US</a></li>
                 <li><a href="/html/login.html">LOG IN</a></li>
-                <li><a href="#carrito">CARRITO</a></li>
             </ul>
         </nav>
     </header>
     <main class="main-carta">
-        
-    </main>>
+        <div class="recuadro" id="recuadro">
+            <h2>XENE IN YOUR HOUSE</h2>
+            <div class="botones">
+                <button onclick="expandirRecuadro()">ORDER</button>
+                <button onclick="recoger()">PICK UP</button>
+            </div>
+            <div id="expansion" style="display: none;">
+                <input type="text" id="direccion" class="direccion-input" placeholder="Enter your address">
+                <button onclick="aceptarDireccion()">Aceptar</button>
+            </div>
+            <div id="direccionInput" style="display: none;">
+                <select id="restaurantes" class="direccion-input">
+                    <option value="restaurant1">Restaurante Zaragoza</option>
+                    <option value="restaurant2">Restaurante Valencia</option>
+                </select>
+                <button onclick="aceptarDireccion()">Aceptar</button>
+            </div>
+        </div>
+    </main>
     <footer>
         <nav>
             <ul>
@@ -47,5 +65,4 @@
         </nav>
     </footer>
 </body>
-
 </html>
