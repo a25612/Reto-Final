@@ -4,8 +4,6 @@ body {
     padding: 0;
     background-color: rgb(255, 0, 0);
 }
-
-
 .pagos {
     max-width: 600px;
     margin: 20px auto;
@@ -18,16 +16,13 @@ body {
     width: 30px; 
     height: auto; 
 }
-
 h3 {
     color: #333;
     margin-top: 0;
 }
-
 label {
     font-weight: bold;
 }
-
 input[type="text"],
 input[type="submit"],
 input[type="checkbox"] {
@@ -38,7 +33,6 @@ input[type="checkbox"] {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
 input[type="submit"] {
     font-family: "Jura", sans-serif;
     background-color: rgb(255, 0, 0);
@@ -48,11 +42,9 @@ input[type="submit"] {
     cursor: pointer;
     font-size: 16px;
 }
-
 input[type="submit"]:hover {
     background-color: darkred;
 }
-
 .metodopago {
     display: flex;
     align-items: center;

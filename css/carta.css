@@ -164,29 +164,8 @@ h2 {
 
 .carrito button:hover {
     background-color: darkred;
-}
 
-.reto {
-    text-align: center;
 }
-
-.reto button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.3em;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: "Jura", sans-serif;
-}
-
-.reto button:hover {
-    background-color: darkred;
-}
-
 .divcarritoCampo {
     width: 50px;
     display: none;

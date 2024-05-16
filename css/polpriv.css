@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Jura", sans-serif;
     background-color: #ff0000;
 }
 
@@ -10,6 +10,7 @@ header {
     color: white;
     padding: 52px;
     text-align: center;
+    font-family: "Jura", sans-serif;
 }
 
 img {
@@ -46,9 +47,167 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
 
+/*-----------------------------*/
+/* MAIN */
+/*--------------------------------*/
+.main {
+    position: relative;
+}
 
+.main h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    font-family: "Jura", sans-serif;
+}
 
+.main button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main button:hover {
+    background-color: darkred;
+}
+
+.main button {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: "Jura", sans-serif;
+}
+
+#video-background {
+    position: static;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.main-images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-images img {
+    width: 60%;
+    height: auto;
+    margin-top: 1%;
+}
+
+.menu {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    margin-right: -20px;
+}
+
+.menu h1 {
+    font-size: 24px;
+    color: #ff0000;
+    font-family: "Jura", sans-serif;
+    
+}
+
+.menu button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jura", sans-serif;
+}
+
+.menu button:hover {
+    background-color: darkred;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.map {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.image {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.map {
+    text-align: center;
+}
+
+.image {
+    text-align: center;
+}
+
+.map h1 {
+    color: #ff0000;
+    font-size: 24px;
+    font-family: "Jura", sans-serif;
+}
+
+.map h2 {
+    color: #ff0000;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: "Jura", sans-serif;
+}
+
+.image img {
+    width: 80%; 
+    height: auto;
+    border-radius: 10px;
+    margin-left: 45px;
+    margin-top: 15px;
+}
+.linkimages img {
+    width: 126px; 
+    height: auto; 
+    margin: 0 10px; 
+    align-items: center;
+    margin-left: 20px;
 }
 
 /*-----------------------------*/
@@ -111,6 +270,7 @@ footer {
     background-color: red;
     color: white;
     text-align: center;
+    font-family: "Jura", sans-serif;
 }
 
 footer nav ul {
