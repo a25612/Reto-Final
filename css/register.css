@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ff0000;
+    font-family: "Jura", sans-serif;
+    background-image: url(/img/fondoburguers.png);
 }
 
 header {
@@ -10,6 +10,7 @@ header {
     color: white;
     padding: 52px;
     text-align: center;
+    font-family: "Jura", sans-serif;
 }
 
 img {
@@ -47,67 +48,95 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 
+
+
 }
-/*-----------------------------*/
-/* BODY */
-/*--------------------------------*/
-  body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-.co{
-    margin: 20px auto;
-    max-width: 800px;
-}
-h1, h2 {
-    color: #ff0000;
-    margin-top: 30px;
+body {
+    background-color: #f6f5f7;
+    font-family: 'Montserrat', sans-serif;
 }
 
-h1 {
-    font-size: 36px;
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: "Jura", sans-serif;
+}
+
+.container form {
     text-align: center;
 }
 
-h2 {
-    font-size: 24px;
+.container h2 {
+    margin-bottom: 20px;
+    font-family: "Jura", sans-serif;
 }
 
-p {
+.form-group {
     margin-bottom: 20px;
 }
 
-strong {
+.form-group label {
+    display: block;
     font-weight: bold;
+    color: #ffffff;
 }
 
-ol, ul {
-    margin-bottom: 20px;
-    margin-left: 20px;
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"] {
+    padding: 10px 115px;
+    margin-top: 5px;
+    border-radius: 5px;
 }
 
-li {
-    margin-bottom: 10px;
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: darkred;
 }
 
-a:hover {
-    text-decoration: underline;
+button {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff2600;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jura", sans-serif;
 }
+
+button:hover {
+    background-color: darkred;
+}
+p, h2 {
+    color: #ffffff;
+  }
+  .container a{
+    color: #f6f5f7;
+  }
+
  /*-----------------------------*/
 /* FOOTER */
 /*--------------------------------*/
 footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: red;
     color: white;
     text-align: center;
+    font-family: "Jura", sans-serif;
 }
 
 footer nav ul {
@@ -167,3 +196,5 @@ footer nav ul p img {
     font-size: 2em;
     margin: 0% 1%;
 }
+
+  

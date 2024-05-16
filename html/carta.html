@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xene Burguer</title>
     <link rel="stylesheet" href="/css/carta.css">
+    <script src="/js/carta.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
     <link rel="icon" type="image/x-icon" href="/img/Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,16 +21,217 @@
         <nav>
             <ul>
                 <li><a href="/html/carta.html">MENU</a></li>
-                <li><a href="/html/order.html">ORDER</a></li>
-                <li><a href="#contactanos">CONTACT</a></li>
+                <li><a href="#pide">ORDER</a></li>
+                <li><a href="#contactanos">ABOUT US</a></li>
                 <li><a href="/html/login.html">LOG IN</a></li>
-                <li><a href="#carrito">CARRITO</a></li>
+                <li><a href="#carrito" onclick="toggleCarrito()">🛒</a></li>
             </ul>
         </nav>
     </header>
+    <div id="carritoContenedor">
+        <div id="carritoCampo">
+            <h2>
+                <button onclick="toggleCarrito()">SHOPPING CART</button>
+            </h2>
+            <ul id="listaCarrito">
+            </ul>
+            <p><span id="totalCarrito">Total: $0.00</span></p>
+            <button class="botoncarrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+            <button class="botoncarrito" onclick="pagarCarrito()">Pagar</button>
+        </div>
+    </div>
+    <div id="menuCategorias">
+        <h2><a href="#" onclick="scrollToSection('beef')">BEEF BURGERS</a></h2>
+        <h2><a href="#" onclick="scrollToSection('chicken')">CHICKEN BURGERS</a></h2>
+        <h2><a href="#" onclick="scrollToSection('special')">SPECIAL BURGERS</a></h2>
+        <h2><a href="#" onclick="scrollToSection('sides')">SIDES</a></h2>
+        <h2><a href="#" onclick="scrollToSection('desserts')">DESSERTS</a></h2>
+        <h2><a href="#" onclick="scrollToSection('drinks')">DRINKS</a></h2>
+    </div>
     <main class="main-carta">
-        
-    </main>>
+        <section id="beef" class="seccion">
+            <h2>BEEF BURGERS</h2>
+            <div class="menu-item">
+                <div class="item">
+                    <h3>HAUSER BURGUER🔥</h3>
+                    <p>DOUBLE SMASH BURGER, CRUNCHY BACON, CHEDDAR, PICKLE AND XENE SAUCE ACCOMPANIED WITH A BRIOCHE
+                        BREAD BUN (LITTLE SPICY)</p>
+                    <p>10,50€ <button class="carrito" onclick="addToCart('HAUSER BURGUER', 10.50)">+</button>
+                    </p>
+                </div>
+                <div class="item">
+                    <h3>WITTZ BURGER​</h3>
+                    <p>GRILLED MINCED MEAT WITH BACON BITS, CRUNCHY ONION AND AMERICAN CHEESE, ACCOMPANIED BY XENE
+                        BARBECUE SAUCE.</p>
+                    <p>10,50€ <button class="carrito" onclick="addToCart('WITTZ BURGER', 10.50)">+</button>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <h3>ZOHEN BURGUER</h3>
+                <p>DOUBLE BEEF SMASH, BACON & CHEESE FRIES AND CHEDDAR CHEESE ON BRIOCHE-STYLE BREAD.</p>
+                <p>12,50€ <button class="carrito" onclick="addToCart('ZOHEN BURGUER', 12.50)">+</button>
+            </div>
+            <div class="item">
+                <h3>NERO BURGUER</h3>
+                <p>FRESH ROMAINE LETTUCE TOSSED IN CREAMY CAESAR DRESSING, TOPPED WITH PARMESAN CHEESE AND SEASONED
+                    CROUTONS.</p>
+                <p>12,50€ <button class="carrito" onclick="addToCart('NERO BURGUER', 12.50)">+</button>
+                    <img src="/img/h1-removebg-preview.png" alt="beef">
+            </div>
+            </div>
+        </section>
+
+        <section id="chicken" class="seccion_2">
+            <h2>CHICKEN BURGUERS</h2>
+            <div class="menu-item">
+                <div class="item">
+                    <h3>KORMER BURGER</h3>
+                    <p>THE ESSENTIAL BURGER FOR CRISPY CHICKEN LOVERS, ENJOY THE CRISPY CHICKEN, WITH BACON, EDAM
+                        CHEESE, ONION AND BARBECUE SAUCE, IN A DOUBLE VERSION.</p>
+                    <p>9,50€ <button class="carrito" onclick="addToCart('KORMER BURGER', 9.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>KIBURN BURGER🔥</h3>
+                    <p>BRIOCHE BREAD, CRISPY FRIED CHICKEN, SWEET CHILLI, XENE SAUCE, PICKLES, AMERICAN CHEESE AND FRESH
+                        LETTUCE (LITTLE SPICY)</p>
+                    <p>9,50€ <button class="carrito" onclick="addToCart('KIBURN BURGER', 9.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>KIWILL BURGER</h3>
+                    <p>CRISPY CHICKEN, CHIPOTLE BBQ SAUCE ON TOMATO, LETTUCE, PICKLE AND BACON SAUCE ON TOASTED BRIOCHE
+                        BREAD WITH TWO SESAME SEEDS.</p>
+                    <p>11,50€ <button class="carrito" onclick="addToCart('KIWILL BURGER', 11.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>BELLATRIX BURGER</h3>
+                    <p>GRILLED CHICKEN BREAST SERVED ON A TOASTED BUN WITH LETTUCE, TOMATO, AND AVOCADO AIOLI.</p>
+                    <p>11,50€ <button class="carrito" onclick="addToCart('BELLATRIX BURGER', 11.50)">+</button>
+                        <img src="/img/h2-removebg-preview.png" alt="beef">
+                </div>
+            </div>
+        </section>
+
+        <section id="special" class="seccion">
+            <h2>SPECIAL BURGERS</h2>
+            <div class="menu-item">
+                <div class="item">
+                    <h3>METEOR BLADE BURGER</h3>
+                    <p>GRILLED BURGER WITH LOTUS BISCUIT SAUCE, CARAMELIZED ONION, SWISS CHEESE AND FRIED BACON.</p>
+                    <p>14,50€ <button class="carrito" onclick="addToCart('METEOR BLADE BURGER', 14.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>CELESTIAL SMASH BURGER🔥</h3>
+                    <p>JUICY BURGER WRAPPED IN A LAYER OF PEPPERONI, TOPPED WITH TOMATO SAUCE, MOZZARELLA CHEESE AND
+                        TOMATO SLICES (LITTLE SPICY)</p>
+                    <p>14,50€ <button class="carrito" onclick="addToCart('CELESTIAL SMASH BURGER', 14.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>SUPERNOVA BURGER🔥</h3>
+                    <p>JUICY BURGER WITH MELTED CHEESE SPREAD ALL OVER THE BURGER WITH CRISPY BACON BITS, 3 BURGERS WITH
+                        LOTS OF CHEESE, LOTS OF FRIED BACON AND OUR SPECIAL XENE SAUCE (LITTLE SPICY)</p>
+                    <p>14,50€ <button class="carrito" onclick="addToCart('SUPERNOVA BURGER', 14.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>BIG BANG BURGER</h3>
+                    <p>JUICY BURGER WITH A GENEROUS PORTION OF CREAMY MAC AND CHEESE, TOPPED WITH CRISPY PIECES OF
+                        BACON.</p>
+                    <p>14,50€ <button class="carrito" onclick="addToCart('BIG BANG BURGER', 14.50)">+</button>
+                        <img src="/img/HAMBURGUESA5.png" alt="beef">
+                </div>
+            </div>
+        </section>
+        <section id="sides" class="seccion_2">
+            <h2>SIDERS</h2>
+            <div class="menu-item">
+                <div class="item">
+                    <h3>JANUS FRIES</h3>
+                    <p>CRISPY, GOLDEN FRIED POTATOES, SEASONED WITH SALT.</p>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('JANUS FRIES', 3.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>DVALIN FRIES🔥🔥🔥</h3>
+                    <p>CRISPY FRENCH FRIES TOPPED WITH MELTED CHEESE, CRISPY BACON PIECES, CARAMELIZED ONIONS AND OUR
+                        SPECIAL XENE SAUCE (VERY SPICY).</p>
+                    <p>7,50€ <button class="carrito" onclick="addToCart('DVALIN FRIES', 7.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>GAZELLE CROQUETTES</h3>
+                    <p>DELICIOUS HOMEMADE HAM CROQUETTES, WITH A CREAMY TEXTURE ON THE INSIDE AND A GOLDEN CRUNCH ON THE
+                        OUTSIDE.</p>
+                    <p>7,50€ <button class="carrito" onclick="addToCart('GAZELLE CROQUETTES', 7.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>TORCH NACHOS🔥🔥</h3>
+                    <p>DELICIOUS NACHOS TOPPED WITH JUICY PULLED PORK, GENEROUS LAYERS OF MELTED CHEESE AND XENE
+                        SAUCE(MEDIUM SPICY).
+                    </p>
+                    <p>8,50€ <button class="carrito" onclick="addToCart('TORCH NACHOS', 8.50)">+</button>
+                        <img src="/img/nachos.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="desserts" class="seccion">
+            <h2>DESSERTS</h2>
+            <div class="menu-item">
+                <div class="item">
+                    <h3>DIAMOND DUST TORRIJA</h3>
+                    <p>AN EXQUISITE TORRIJA FILLED WITH SOFT NOCILLA, ACCOMPANIED BY A SCOOP OF CREAMY ICE CREAM.</p>
+                    <p>6,50€ <button class="carrito" onclick="addToCart('DIAMOND DUST TORRIJA', 6.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>PROMINENCE CHEESECAKE</h3>
+                    <p>A DELICIOUS BAKED CHEESECAKE WITH A CRISPY BASE AND SOFT CREAMY FILLING.</p>
+                    <p>6,50€ <button class="carrito" onclick="addToCart('PROMINENCE CHEESECAKE', 6.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>EPSILON BROWNIE</h3>
+                    <p>A DECADENT CHOCOLATE BROWNIE PACKED WITH OREO COOKIE PIECES, PERFECTLY BAKED FOR A CRUNCHY
+                        OUTSIDE AND SOFT INSIDE TEXTURE.</p>
+                    <p>6,50€ <button class="carrito" onclick="addToCart('EPSILON BROWNIE', 6.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>GAIA TIRAMISU</h3>
+                    <p>CLASSIC ITALIAN DESSERT MADE WITH LAYERS OF ESPRESSO-SOAKED LADYFINGERS, MASCARPONE CHEESE, AND
+                        COCOA POWDER.</p>
+                    <p>6,50€ <button class="carrito" onclick="addToCart('GAIA TIRAMISU', 6.50)">+</button>
+                        <img src="/img/lakasa_tarta_de_queso_azul-removebg-preview.png" class="tarta">
+                </div>
+            </div>
+        </section>
+        <section id="drinks" class="seccion_2">
+            <h2>DRINKS</h2>
+            <div class="menu-item">
+                <div class="item">
+                    <h3>WATER</h3>
+                    <p>2,50€ <button class="carrito" onclick="addToCart('WATER', 2.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>COCACOLA</h3>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('COCACOLA' , 3.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>FANTA</h3>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('FANTA', 3.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>NESTEA</h3>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('NESTEA', 3.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>AQUARIUS</h3>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('AQUARIUS', 3.50)">+</button>
+                </div>
+                <div class="item">
+                    <h3>AMBAR BEER</h3>
+                    <p>3,50€ <button class="carrito" onclick="addToCart('BEER', 3.50)">+</button>
+                </div>
+                        <img src="/img/refrescos.png" alt="">
+                </div>
+            </div>
+        </section>
+
+    </main>
     <footer>
         <nav>
             <ul>

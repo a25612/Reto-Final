@@ -1,24 +1,38 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Jura", sans-serif;
+    background-image: url(/img/fondoburguers.png);
+}
+
+.overlay {
+    position: absolute;
+    margin-top: 120px;
+    left: 0;
+    width: 100%;
+    height: 387%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
 }
 
 header {
     background-color: red;
     color: white;
     padding: 52px;
-    text-align: center; 
+    text-align: center;
+    font-family: "Jura", sans-serif;
 }
-img{
-    width: 120px; 
-    height: auto; 
+
+img {
+    width: 120px;
+    height: auto;
     float: left;
     margin-top: -50px;
 }
 
 nav {
-    display: inline-block; 
+    display: inline-block;
+
 }
 
 nav ul {
@@ -29,10 +43,10 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
-    border: 3px solid white; 
-    padding: 5px 10px; 
-    border-radius: 0px; 
+    margin-right: 100px;
+    border: 3px solid white;
+    padding: 5px 10px;
+    border-radius: 0px;
 }
 
 nav ul li a {
@@ -43,12 +57,246 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+
+}
+
+#carritoCampo {
+    display: none;
 }
 
 /*-----------------------------*/
 /* CARTA */
 /*--------------------------------*/
+.main-carta {
+    padding: 20px;
+}
 
+.seccion {
+    position: relative;
+    margin-right: 900px;
+}
+
+.seccion img {
+    position: absolute;
+    top: 140px;
+    right: -700px;
+    width: 500px;
+    height: auto;
+}
+
+.seccion_2 {
+    position: relative;
+    margin-left: 900px;
+}
+
+.seccion_2 img {
+    position: absolute;
+    top: 200px;
+    right: 1200px;
+    width: 550px;
+    height: auto;
+}
+.seccion img tarta{
+    position: absolute;
+    top: 140px;
+    right: -700px;
+    width: 500px;
+    height: auto;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(226, 17, 17);
+    background-color: #000000;
+    padding: 5px 10px;
+    border: 2px solid rgb(226, 17, 17);
+    font-family: "Jura", sans-serif;
+    text-align: center;
+}
+
+.item {
+    padding: 20px;
+    font-family: "Jura", sans-serif;
+    ;
+}
+
+.item h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #ff0000;
+
+}
+
+.item p {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.item p:last-child {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.carrito {
+    background-color: red;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jura", sans-serif;
+}
+
+.minus-button {
+    background-color: red;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jura", sans-serif;
+}
+
+.carrito button:hover {
+    background-color: darkred;
+}
+
+.reto {
+    text-align: center;
+}
+
+.reto button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jura", sans-serif;
+}
+
+.reto button:hover {
+    background-color: darkred;
+}
+
+.divcarritoCampo {
+    width: 50px;
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.botoncarrito {
+    background-color: #dd180a;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 15px auto 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+h2 button {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(226, 17, 17);
+    background-color: #000000;
+    padding: 5px 10px;
+    font-family: "Jura", sans-serif;
+    text-align: center;
+    border: none;
+}
+
+
+#totalCarrito {
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#totalCarrito span {
+    font-weight: normal;
+}
+
+#carritoContenedor {
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#listaCarrito li {
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+}
+
+#listaCarrito span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#listaCarrito button {
+    background-color: #ff0000;
+    color: white; 
+    border: none; 
+    padding: 5px 10px;
+    cursor: pointer; 
+}
+
+#listaCarrito button:hover {
+    background-color: darkred; 
+}
+#menuCategorias {
+    text-align: center; 
+}
+
+#menuCategorias h2 {
+    font-size: 24px;
+    margin-bottom: 15px; 
+    color: rgb(226, 17, 17); 
+    background-color: #000000; 
+    padding: 5px 10px; 
+    border: 2px solid rgb(226, 17, 17); 
+    font-family: "Jura"; 
+    text-align: center; 
+    display: inline-block; 
+    margin-right: 100px; 
+}
+
+#menuCategorias h2 a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+#menuCategorias h2:hover {
+    background-color: darkred; 
+}
 
 /*-----------------------------*/
 /* FOOTER */
@@ -62,6 +310,7 @@ footer {
     background-color: red;
     color: white;
     text-align: center;
+    font-family: "Jura", sans-serif;
 }
 
 footer nav ul {
@@ -120,4 +369,17 @@ footer nav ul p img {
 .footer .row a i {
     font-size: 2em;
     margin: 0% 1%;
+}
+
+/*-----------------------------*/
+/* RESPONSIVE */
+/*--------------------------------*/
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10ipx; 
+    }
+    nav ul li {
+        margin-right: 30px; 
+    }
 }
