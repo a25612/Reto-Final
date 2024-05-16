@@ -24,8 +24,8 @@ label {
     font-weight: bold;
 }
 input[type="text"],
-input[type="submit"],
-input[type="checkbox"] {
+input[type="email"],
+input[type="submit"] {
     width: 100%;
     padding: 10px;
     margin: 8px 0;

@@ -1,70 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xene Burguer</title>
-    <link rel="stylesheet" href="/css/pago.css"> 
-    <link rel="icon" type="image/x-icon" href="/img/Logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xene Burguer</title>
+  <link rel="stylesheet" href="/css/pago.css">
+  <link rel="icon" type="image/x-icon" href="/img/Logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-          <div class="pagos">
-              <div class="direccion">
-                <div class="dire">
-                  <h3>BILLING ADDRESS</h3>
-                  <label for="fname"><i class="fa fa-user"></i> FULL NAME</label>
-                  <input type="text" id="fname" name="firstname">
-                  <label for="email"><i class="fa fa-envelope"></i> EMAIL</label>
-                  <input type="text" id="email" name="email">
-                  <label for="adr"><i class="fa fa-address-card-o"></i> ADDRESS</label>
-                  <input type="text" id="adr" name="address">
-                  <label for="city"><i class="fa fa-institution"></i> CITY</label>
-                  <input type="text" id="city" name="city">
-      
-                  <div class="ciudad">
-                    <div class="ciu">
-                      <label for="state">STATE</label>
-                      <input type="text" id="state" name="state">
-                    </div>
-                    <div class="codigopostal">
-                      <label for="zip">ZIP</label>
-                      <input type="text" id="zip" name="zip">
-                    </div>
-                  </div>
-                </div>
-      
-                <div class="pagos">
-                  <h3>PAYMENT</h3>
-                  <label for="fname">ACCEPTED CARDS</label>
-                  <div class="metodopago">
-                    <img src="/img/Old_Visa_Logo.svg.png" alt="Visa">
-                    <img src="/img/2560px-Apple_Pay_logo.svg.png" alt="Applepay">
-                    <img src="/img/8539461.png" alt="efectivo">
-                  </div>
-                  <label for="cname">NAME CARD</label>
-                  <input type="text" id="cname" name="cardname">
-                  <label for="ccnum">CREDIT CARD NUMBER</label>
-                  <input type="text" id="ccnum" name="cardnumber">
-                  <label for="expmonth">EXP MONTH</label>
-                  <input type="text" id="expmonth" name="expmonth">
-      
-                  <div class="row">
-                    <div class="año">
-                      <label for="expyear">EXP YEAR</label>
-                      <input type="text" id="expyear" name="expyear">
-                    </div>
-                    <div class="cvv">
-                      <label for="cvv">CVV</label>
-                      <input type="text" id="cvv" name="cvv">
-                    </div>
-                  </div>
-                </div>
-      
-              </div>
-              <input type="submit" value="Continue to checkout" class="btn" onclick="location.href='pagocompletado.html';">
-            </form>
+  <div class="pagos">
+    <form id="miFormulario" action="pagocompletado.html" method="post">
+      <div class="direccion">
+        <div class="dire">
+          <h3>BILLING ADDRESS</h3>
+          <label for="fname"><i class="fa fa-user"></i> FULL NAME</label>
+          <input type="text" id="fname" name="firstname" required>
+          <label for="email"><i class="fa fa-envelope"></i> EMAIL</label>
+          <input type="email" id="email" name="email" required>
+          <label for="adr"><i class="fa fa-address-card-o"></i> ADDRESS</label>
+          <input type="text" id="adr" name="address" required>
+          <label for="city"><i class="fa fa-institution"></i> CITY</label>
+          <input type="text" id="city" name="city" required>
+
+          <div class="ciudad">
+            <div class="ciu">
+              <label for="state">STATE</label>
+              <input type="text" id="state" name="state" required>
+            </div>
+            <div class="codigopostal">
+              <label for="zip">ZIP</label>
+              <input type="text" id="zip" name="zip" required>
+            </div>
           </div>
         </div>
+
+        <div class="pagos">
+          <h3>PAYMENT</h3>
+          <label for="fname">ACCEPTED CARDS</label>
+          <div class="metodopago">
+            <img src="/img/Old_Visa_Logo.svg.png" alt="Visa">
+            <img src="/img/2560px-Apple_Pay_logo.svg.png" alt="Applepay">
+            <img src="/img/8539461.png" alt="efectivo">
+          </div>
+          <label for="cname">NAME CARD</label>
+          <input type="text" id="cname" name="cardname" required>
+          <label for="ccnum">CREDIT CARD NUMBER</label>
+          <input type="text" id="ccnum" name="cardnumber" required>
+          <label for="expmonth">EXP MONTH</label>
+          <input type="text" id="expmonth" name="expmonth" required>
+
+          <div class="row">
+            <div class="año">
+              <label for="expyear">EXP YEAR</label>
+              <input type="text" id="expyear" name="expyear" required>
+            </div>
+            <div class="cvv">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Continue to checkout" class="btn">
+    </form>
+  </div>
+  <script>
+    document.getElementById('miFormulario').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+      // esta todo correcto
+      var form = event.target;
+
+      if (form.checkValidity()) {
+        // Aquí s redirige al pago completado
+        window.location.href = 'pagocompletado.html';
+      } else {
+        // Si el formulario no es válido, sirve para mostrar un mensaje de error
+        alert('Por favor, completa todos los campos requeridos.');
+      }
+    });
+  </script>
 </body>
 </html>

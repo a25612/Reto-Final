@@ -283,3 +283,56 @@ footer nav ul p img {
     font-size: 2em;
     margin: 0% 1%;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .main h1 {
+        font-size: 2em;
+    }
+
+    .main button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .main-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-images img {
+        width: 80%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .map, .image {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    .linkimages {
+        flex-direction: column;
+    }
+
+    .linkimages img {
+        width: 80px;
+        margin: 10px 0;
+    }
+}
