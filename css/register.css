@@ -197,4 +197,60 @@ footer nav ul p img {
     margin: 0% 1%;
 }
 
-  
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .main h1 {
+        font-size: 2em;
+        top: 25%;
+    }
+
+    .main button {
+        font-size: 1em;
+        top: 40%;
+    }
+
+    .main-images img {
+        width: 80%;
+    }
+
+
+    img {
+        width: 190px;
+        height: auto;
+        float: left;
+        margin-top: 50px;
+    }
+
+    .container{
+        margin: -38px auto;
+    }
+
+    footer nav ul p {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer .row a i {
+        font-size: 1.5em;
+    }
+}

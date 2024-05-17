@@ -356,35 +356,52 @@ footer nav ul p img {
 
 @media only screen and (max-width: 768px) {
     header {
-        padding: 10px;
-    }
-
-    header img {
-        display: block;
-        margin: 0 auto;
-        float: none;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
+        padding: 20px 10px;
     }
 
     nav ul li {
         display: block;
-        margin-bottom: 10px;
-        margin-right: 0;
+        margin: 10px 0;
+        text-align: center;
     }
 
     nav ul li a {
         display: block;
-        padding: 10px;
+        padding: 10px 0;
     }
 
-    .main h1, .main h2, .menu h1, .map h1, .map h2 {
+    .main h1 {
+        font-size: 2em;
+        top: 25%;
+    }
+
+    .main button {
+        font-size: 1em;
+        top: 40%;
+    }
+
+    .main-images img {
+        width: 80%;
+    }
+
+
+    img {
+        width: 190px;
+        height: auto;
+        float: left;
+        margin-top: 50px;
+    }
+
+    #menuCategorias h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: rgb(226, 17, 17);
+        background-color: #000000;
+        padding: 5px 10px;
+        border: 2px solid rgb(226, 17, 17);
+        font-family: "Jura";
         text-align: center;
+        display: inline-block;
     }
 
     .main-images {
@@ -399,6 +416,7 @@ footer nav ul p img {
     .menu {
         margin: 20px auto;
         padding: 10px;
+        margin-right: 0px;
     }
 
     .container {
@@ -415,14 +433,6 @@ footer nav ul p img {
     .seccion, .seccion_2 {
         margin: 0;
         text-align: center;
-    }
-
-    .seccion img, .seccion_2 img {
-        position: relative;
-        top: 0;
-        right: 0;
-        width: 80%;
-        margin: 20px 0;
     }
 
     .linkimages {
@@ -450,10 +460,11 @@ footer nav ul p img {
     .footer .row a i {
         font-size: 1.5em;
     }
+    p, h2 {
+        text-align: center;
+    }
 
-    /* Center paragraphs and h2 elements on small screens */
-    p,
-    h2 {
+    .menucategorias{
         text-align: center;
     }
 }
