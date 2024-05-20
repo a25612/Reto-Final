@@ -256,7 +256,7 @@ footer nav ul p img {
         margin-top: 50px;
     }
 
-}.recuadro {
+  .recuadro {
     margin-top: 80px;
     }
 
@@ -274,3 +274,4 @@ footer nav ul p img {
     .footer .row a i {
         font-size: 1.5em;
     }
+}

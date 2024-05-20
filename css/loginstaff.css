@@ -1,0 +1,75 @@
+body {
+    background-color: #000000;
+    font-family: "Jura", sans-serif;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 240px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .container form {
+    text-align: center;
+  }
+  
+  .container h2 {
+    margin-bottom: 20px;
+    font-family: "Jura", sans-serif;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"] {
+    margin: auto;
+    padding: 10px 115px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="tel"]:focus {
+    outline: none;
+    border-color: #FF4B2B;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff2600;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jura", sans-serif;
+  }
+  
+  button:hover {
+    background-color: darkred;
+  }
+  
+  p, h2 {
+    color: #ffffff;
+  }
+  .container a{
+    color: #f6f5f7;
+  }

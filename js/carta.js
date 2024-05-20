@@ -10,8 +10,6 @@ function mostrarCarrito() {
         carritoCampo.style.display = 'none';
     }
 }
-
-// Función para agregar un producto al carrito
 // Función para agregar un producto al carrito
 function addToCart(nombre, precio) {
     var index = carrito.findIndex(producto => producto.nombre === nombre);
