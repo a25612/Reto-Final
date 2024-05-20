@@ -21,6 +21,23 @@
         <label for="password">PASSWORD*</label>
         <input type="password" id="password" name="password" required>
       </div>
-      <button type="button" onclick="window.location.href='staff.html'">LOG IN</button>
+      <button type="button" onclick="login()">LOG IN</button>
     </form>
   </div>
+  <script>
+    function login() {
+        var usernameInput = document.getElementById('username').value;
+        var passwordInput = document.getElementById('password').value;
+
+        // Usuario y contraseña predefinidos
+        var predefinedUsername = 'Admin';
+        var predefinedPassword = 'Xene1234';
+
+        if (usernameInput === predefinedUsername && passwordInput === predefinedPassword) {
+            window.location.href = 'staff.html';
+        } else {
+            alert('Invalid username or password. Please try again.');
+        }
+    }
+</script>
+</html> 
