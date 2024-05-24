@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         clients.forEach(client => {
             const row = document.createElement('tr');
-            
+
             const clientDetails = `
                 <td>${client.id_cliente}</td>
                 <td>${client.nombre}</td>
@@ -56,6 +56,37 @@ window.addEventListener('DOMContentLoaded', (event) => {
             deleteClient(clientId);
         } else {
             alert('Debe ingresar un ID válido.');
+        }
+    });
+    const addClient = async (clientId, clientName, clientEmail, clientPassword, clientPhone) => {
+        const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=CLIENTES.ADD&ID_CLIENTE=${clientId}&NOMBRE=${clientName}&EMAIL=${clientEmail}&CONTRASENA=${clientPassword}&TELEFONO=${clientPhone}`;
+        try {
+            const response = await fetch(url, { method: 'POST' });
+            if (response.ok) {
+                alert('Cliente añadido exitosamente.');
+                getClients();
+            } else {
+                throw new Error('Error al añadir cliente.');
+            }
+        } catch (error) {
+            console.error('Error al añadir cliente:', error);
+        }
+    };
+
+    // Evento para añadir un cliente al hacer clic en un botón
+    const addButton = document.getElementById('addButton');
+    addButton.addEventListener('click', () => {
+        // Obtener los valores de los campos de texto
+        const clientId = prompt('Ingrese el ID del cliente:');
+        const clientName = prompt('Ingrese el nombre del cliente:');
+        const clientEmail = prompt('Ingrese el email del cliente:');
+        const clientPassword = prompt('Ingrese la contrasena del cliente:');
+        const clientPhone = prompt('Ingrese el teléfono del cliente:');
+        if (clientId.trim() !== '' && clientName.trim() !== '' && clientEmail.trim() !== '' && clientPassword.trim() !== '' && clientPhone.trim() !== '') {
+            const clientData = { id: clientId, name: clientName, email: clientEmail, password: clientPassword, phone: clientPhone };
+            addClient(clientData);
+        } else {
+            alert('Debe ingresar un nombre y un email válidos.');
         }
     });
 
