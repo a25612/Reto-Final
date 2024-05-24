@@ -4,54 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
-    <style>
-        /* Estilos para las tarjetas de cliente */
-        .client-card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 16px;
-            margin: 16px;
-            max-width: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/user.css">
+    <script src="/js/Metodos/users.js"></script>
 </head>
 <body>
-    <div id="client_list"></div>
+    <div class="container">
+        <table id="clients_table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos de los clientes se insertarán aquí -->
+            </tbody>
+        </table>
+        <div class="buttons">
+            <button id="addButton">ADD</button>
+            <button id="deleteButton">DELETE</button>
+        </div>
+    </div>
 
-    <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const getClients = async () => {
-                const url = 'http://localhost:8080/Xeneburguer/Controller?ACTION=CLIENTES.FIND_ALL';
-                try {
-                    const response = await fetch(url);
-                    const clients = await response.json();
-                    displayClients(clients);
-                } catch (error) {
-                    console.error('Error fetching clients:', error);
-                }
-            };
-
-            const displayClients = (clients) => {
-                const clientList = document.getElementById('client_list');
-                clientList.innerHTML = '';
-
-                clients.forEach(client => {
-                    const clientCard = document.createElement('div');
-                    clientCard.classList.add('client-card');
-                    
-                    const clientDetails = `
-                        <h3>${client.nombre}</h3>
-                        <p>ID: ${client.id_cliente}</p>
-                        <p>Email: ${client.email}</p>
-                        <p>Teléfono: ${client.telefono}</p>
-                    `;
-                    clientCard.innerHTML = clientDetails;
-                    clientList.appendChild(clientCard);
-                });
-            };
-
-            getClients();
-        });
-    </script>
 </body>
 </html>

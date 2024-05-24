@@ -1,52 +1,63 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-
-    const fetchClientes = async () => {
-        for (let i = 1; i <= 30; i++) {
-            await getCliente(i);
-        }
-    }
-
-    /** Método para hacer la petición a la API y obtener el json de resultados */
-    const getCliente = async (id) => {
-        const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=EMPLEADOS.FIND_ALL`;
-
+    const getClients = async () => {
+        const url = 'http://localhost:8080/Xeneburguer/Controller?ACTION=CLIENTES.FIND_ALL';
         try {
             const response = await fetch(url);
-            if (!response.ok) throw new Error(`Error fetching Cliente with ID: ${id}`);
-            const cliente = await response.json();
-            console.log(cliente);
-            createClienteItem(cliente);
+            const clients = await response.json();
+            displayClients(clients);
         } catch (error) {
-            console.error(error);
+            console.error('Error fetching clients:', error);
         }
-    }
+    };
 
-    /** Método para crear el HTML del Elemento Cliente */
-    const createClienteItem = (cliente) => {
-        console.log('createClienteItem => ', cliente);
-        const cliente_list = document.querySelector('#cliente_list');
-        const card = document.createElement('div');
-        card.classList.add('card');
+    const displayClients = (clients) => {
+        clients.sort((a, b) => a.id_cliente - b.id_cliente);
+        const clientList = document.querySelector('#clients_table tbody');
+        clientList.innerHTML = '';
 
-        const { id_cliente, nombre, email, telefono } = cliente;
+        clients.forEach(client => {
+            const row = document.createElement('tr');
+            
+            const clientDetails = `
+                <td>${client.id_cliente}</td>
+                <td>${client.nombre}</td>
+                <td>${client.email}</td>
+                <td>${client.telefono}</td>
+                <td>
+                    <button class="action-button view">UPDATE</button>
+                </td>
+            `;
+            row.innerHTML = clientDetails;
+            clientList.appendChild(row);
+        });
+    };
 
-        card.innerHTML = `
-            <div class="card-header"></div>
-            <div class="card-body">
-                <a class="card-body-title clickable" href="detail.html?id=${id_cliente}">
-                    ${nombre}
-                </a>
-                <p class="card-body-text">${email}</p>
-            </div>
-            <div class="card-footer">
-                <div class="card-footer-social">
-                    <h3>${telefono}</h3>
-                    <p>Teléfono</p>
-                </div>
-            </div>`;
+    const deleteClient = async (clientId) => {
+        const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=CLIENTES.DELETE&ID_CLIENTE=${clientId}`;
+        try {
+            const response = await fetch(url, { method: 'DELETE' });
+            if (response.ok) {
+                alert('Cliente eliminado exitosamente.');
+                // Volver a cargar la lista de clientes después de eliminar uno
+                getClients();
+            } else {
+                throw new Error('Error al eliminar cliente.');
+            }
+        } catch (error) {
+            console.error('Error al eliminar cliente:', error);
+        }
+    };
 
-        cliente_list.appendChild(card);
-    }
+    // Agregar evento de clic al botón "DELETE"
+    const deleteButton = document.getElementById('deleteButton');
+    deleteButton.addEventListener('click', () => {
+        const clientId = prompt('Ingrese el ID del cliente que desea eliminar:');
+        if (clientId !== null && clientId.trim() !== '') {
+            deleteClient(clientId);
+        } else {
+            alert('Debe ingresar un ID válido.');
+        }
+    });
 
-    fetchClientes();
+    getClients();
 });
