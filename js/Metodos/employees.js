@@ -29,10 +29,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             const row = document.createElement('tr');
 
             const employeeDetails = `
-                <td>${employee.id}</td>
+                <td>${employee.ID}</td>
                 <td>${employee.nombre}</td>
                 <td>${employee.apellidos}</td>
-                <td>${employee.dni}</td>
+                <td>${employee.DNI}</td>
                 <td>${employee.telefono}</td>
                 <td>${employee.cargo}</td>
                 <td>
