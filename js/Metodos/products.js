@@ -4,26 +4,33 @@ window.addEventListener('DOMContentLoaded', (event) => {
         try {
             const response = await fetch(url);
             const products = await response.json();
+    
+            // Imprimir los productos en la consola para verificar la respuesta
+            console.log('Products fetched:', products);
+    
             displayProducts(products);
         } catch (error) {
             console.error('Error fetching products:', error);
         }
     };
-
+    
     const displayProducts = (products) => {
-        products.sort((a, b) => a.id_producto - b.id_producto);
+        products.sort((a, b) => a.Id_Producto - b.Id_Producto);
         const productList = document.querySelector('#products_table tbody');
         productList.innerHTML = '';
-
+    
         products.forEach(product => {
             const row = document.createElement('tr');
-
+    
+            // Verificar si el precio está definido y es un número
+            const precio = (typeof product.Precio === 'number') ? product.Precio.toFixed(2) : 'N/A';
+    
             const productDetails = `
-                <td>${product.id_producto}</td>
-                <td>${product.nombre}</td>
-                <td>${product.descripcion}</td>
-                <td>${product.precio.toFixed(2)}</td>
-                <td>${product.id_tipo}</td>
+                <td>${product.Id_Producto}</td>
+                <td>${product.Nombre}</td>
+                <td>${product.Descripcion}</td>
+                <td>${precio}</td>
+                <td>${product.Id_Tipo}</td>
                 <td>
                     <button class="action-button view">UPDATE</button>
                 </td>
@@ -32,6 +39,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             productList.appendChild(row);
         });
     };
+    
 
     const deleteProduct = async (productId) => {
         const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=PRODUCTOS.DELETE&ID_PRODUCTO=${productId}`;
