@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', (event) => {
     const getProducts = async () => {
         const url = 'http://localhost:8080/Xeneburguer/Controller?ACTION=PRODUCTOS.FIND_ALL';
         try {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 <td>${product.id_producto}</td>
                 <td>${product.nombre}</td>
                 <td>${product.descripcion}</td>
-                <td>${product.precio}</td>
+                <td>${product.precio.toFixed(2)}</td>
                 <td>${product.id_tipo}</td>
                 <td>
                     <button class="action-button view">UPDATE</button>
