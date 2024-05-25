@@ -3,10 +3,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const url = 'http://localhost:8080/Xeneburguer/Controller?ACTION=EMPLEADOS.FIND_ALL';
         try {
             const response = await fetch(url);
+            console.log('Fetching employees from:', url);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const employees = await response.json();
+            console.log('Received employees:', employees); // Verificar los datos recibidos
             displayEmployees(employees);
         } catch (error) {
             console.error('Error fetching employees:', error);
@@ -20,16 +22,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
             console.error("Element with id 'employees_table' not found.");
             return;
         }
-        employees.sort((a, b) => a.id - b.id);
+        employees.sort((a, b) => a.Id_Empleado - b.Id_Empleado);
         employeeList.innerHTML = '';
 
         employees.forEach(employee => {
-            console.log(employee); // Imprimir el objeto empleado para verificar los campos
+            console.log('Employee:', employee); // Verificar cada objeto empleado
 
             const row = document.createElement('tr');
 
             const employeeDetails = `
-                <td>${employee.ID}</td>
+                <td>${employee.Id_Empleado}</td>
                 <td>${employee.nombre}</td>
                 <td>${employee.apellidos}</td>
                 <td>${employee.DNI}</td>
@@ -71,7 +73,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 
     const addEmployee = async (employee) => {
-        const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=EMPLEADOS.ADD&ID_EMPLEADO=${employee.id}&NOMBRE=${employee.name}&APELLIDOS=${employee.surname}&DNI=${employee.dni}&TELEFONO=${employee.phone}&CARGO=${employee.position}`;
+        const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=EMPLEADOS.ADD&ID_EMPLEADO=${employee.Id_Empleado}&NOMBRE=${employee.nombre}&APELLIDOS=${employee.apellidos}&DNI=${employee.DNI}&TELEFONO=${employee.telefono}&CARGO=${employee.cargo}`;
         try {
             const response = await fetch(url, { method: 'POST' });
             if (response.ok) {
@@ -95,7 +97,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const employeePhone = prompt('Ingrese el teléfono del empleado:');
         const employeePosition = prompt('Ingrese el cargo del empleado:');
         if (employeeId.trim() !== '' && employeeName.trim() !== '' && employeeSurname.trim() !== '' && employeeDNI.trim() !== '' && employeePhone.trim() !== '' && employeePosition.trim() !== '') {
-            const employeeData = { id: employeeId, name: employeeName, surname: employeeSurname, dni: employeeDNI, phone: employeePhone, position: employeePosition };
+            const employeeData = { Id_Empleado: employeeId, nombre: employeeName, apellidos: employeeSurname, DNI: employeeDNI, telefono: employeePhone, cargo: employeePosition };
             addEmployee(employeeData);
         } else {
             alert('Debe ingresar datos válidos.');
