@@ -87,7 +87,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             alert(`Error al añadir empleado: ${error.message}`);
         }
     };
-
+    
     const addButton = document.getElementById('addButton');
     addButton.addEventListener('click', () => {
         const employeeId = prompt('Ingrese el ID del empleado:');
