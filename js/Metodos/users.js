@@ -38,7 +38,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             const response = await fetch(url, { method: 'DELETE' });
             if (response.ok) {
                 alert('Cliente eliminado exitosamente.');
-                // Volver a cargar la lista de clientes después de eliminar uno
                 getClients();
             } else {
                 throw new Error('Error al eliminar cliente.');
@@ -48,16 +47,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     };
 
-    // Agregar evento de clic al botón "DELETE"
-    const deleteButton = document.getElementById('deleteButton');
-    deleteButton.addEventListener('click', () => {
-        const clientId = prompt('Ingrese el ID del cliente que desea eliminar:');
-        if (clientId !== null && clientId.trim() !== '') {
-            deleteClient(clientId);
-        } else {
-            alert('Debe ingresar un ID válido.');
-        }
-    });
     const addClient = async (clientId, clientName, clientEmail, clientPassword, clientPhone) => {
         const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=CLIENTES.ADD&ID_CLIENTE=${clientId}&NOMBRE=${clientName}&EMAIL=${clientEmail}&CONTRASENA=${clientPassword}&TELEFONO=${clientPhone}`;
         try {
@@ -73,20 +62,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     };
 
-    // Evento para añadir un cliente al hacer clic en un botón
+    // Evento para eliminar un cliente
+    const deleteButton = document.getElementById('deleteButton');
+    deleteButton.addEventListener('click', () => {
+        const clientId = prompt('Ingrese el ID del cliente que desea eliminar:');
+        if (clientId !== null && clientId.trim() !== '') {
+            deleteClient(clientId);
+        } else {
+            alert('Debe ingresar un ID válido.');
+        }
+    });
+
+    // Evento para añadir un cliente
     const addButton = document.getElementById('addButton');
     addButton.addEventListener('click', () => {
-        // Obtener los valores de los campos de texto
         const clientId = prompt('Ingrese el ID del cliente:');
         const clientName = prompt('Ingrese el nombre del cliente:');
         const clientEmail = prompt('Ingrese el email del cliente:');
-        const clientPassword = prompt('Ingrese la contrasena del cliente:');
+        const clientPassword = prompt('Ingrese la contraseña del cliente:');
         const clientPhone = prompt('Ingrese el teléfono del cliente:');
         if (clientId.trim() !== '' && clientName.trim() !== '' && clientEmail.trim() !== '' && clientPassword.trim() !== '' && clientPhone.trim() !== '') {
-            const clientData = { id: clientId, name: clientName, email: clientEmail, password: clientPassword, phone: clientPhone };
-            addClient(clientData);
+            addClient(clientId, clientName, clientEmail, clientPassword, clientPhone);
         } else {
-            alert('Debe ingresar un nombre y un email válidos.');
+            alert('Debe ingresar todos los campos.');
         }
     });
 
