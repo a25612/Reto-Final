@@ -23,12 +23,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 <td>${client.nombre}</td>
                 <td>${client.email}</td>
                 <td>${client.telefono}</td>
-                <td>
-                    <button class="action-button view">UPDATE</button>
-                </td>
             `;
             row.innerHTML = clientDetails;
             clientList.appendChild(row);
+        });
+
+        document.querySelectorAll('.action-button.update').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const clientId = event.target.getAttribute('data-id');
+                const client = clients.find(c => c.id_cliente === parseInt(clientId));
+                updateClient(client);
+            });
         });
     };
 
@@ -62,6 +67,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     };
 
+    const updateClient = async (clientId, clientName, clientEmail, clientPassword, clientPhone) => {
+        const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=CLIENTES.UPDATE&ID_CLIENTE=${clientId}&NOMBRE=${clientName}&EMAIL=${clientEmail}&CONTRASENA=${clientPassword}&TELEFONO=${clientPhone}`;
+        try {
+            const response = await fetch(url, { method: 'POST' });
+            if (response.ok) {
+                alert('Cliente actualizado exitosamente.');
+                getClients();
+            } else {
+                throw new Error('Error al actualizar cliente.');
+            }
+        } catch (error) {
+            console.error('Error al actualizar cliente:', error);
+        }
+    };
+    
+
     // Evento para eliminar un cliente
     const deleteButton = document.getElementById('deleteButton');
     deleteButton.addEventListener('click', () => {
@@ -74,19 +95,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 
     // Evento para añadir un cliente
-    const addButton = document.getElementById('addButton');
-    addButton.addEventListener('click', () => {
-        const clientId = prompt('Ingrese el ID del cliente:');
-        const clientName = prompt('Ingrese el nombre del cliente:');
-        const clientEmail = prompt('Ingrese el email del cliente:');
-        const clientPassword = prompt('Ingrese la contraseña del cliente:');
-        const clientPhone = prompt('Ingrese el teléfono del cliente:');
-        if (clientId.trim() !== '' && clientName.trim() !== '' && clientEmail.trim() !== '' && clientPassword.trim() !== '' && clientPhone.trim() !== '') {
-            addClient(clientId, clientName, clientEmail, clientPassword, clientPhone);
-        } else {
-            alert('Debe ingresar todos los campos.');
-        }
-    });
+    const updateButton = document.getElementById('updateButton');
+updateButton.addEventListener('click', () => {
+    const clientId = prompt('Ingrese el ID del cliente:');
+    const clientName = prompt('Ingrese el nombre del cliente:');
+    const clientEmail = prompt('Ingrese el email del cliente:');
+    const clientPassword = prompt('Ingrese la contraseña del cliente:');
+    const clientPhone = prompt('Ingrese el teléfono del cliente:');
+    if (clientId.trim() !== '' && clientName.trim() !== '' && clientEmail.trim() !== '' && clientPassword.trim() !== '' && clientPhone.trim() !== '') {
+        updateClient(clientId, clientName, clientEmail, clientPassword, clientPhone);
+    } else {
+        alert('Debe ingresar todos los campos.');
+    }
+});
 
     getClients();
 });
