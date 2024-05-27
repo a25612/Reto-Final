@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             console.error('Error fetching products:', error);
         }
     };
-    
+
     const displayProducts = (products) => {
         products.sort((a, b) => a.Id_Producto - b.Id_Producto);
         const productList = document.querySelector('#products_table tbody');
@@ -32,28 +32,38 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 <td>${precio}</td>
                 <td>${product.Id_Tipo}</td>
                 <td>
-                    <button class="action-button view">UPDATE</button>
+                    <button class="action-button update" data-id="${product.Id_Producto}">UPDATE</button>
                 </td>
             `;
             row.innerHTML = productDetails;
             productList.appendChild(row);
         });
-    };
-    
 
-    const deleteProduct = async (productId) => {
-        const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=PRODUCTOS.DELETE&ID_PRODUCTO=${productId}`;
-        try {
-            const response = await fetch(url, { method: 'DELETE' });
-            if (response.ok) {
-                alert('Producto eliminado exitosamente.');
-                getProducts();
-            } else {
-                throw new Error('Error al eliminar producto.');
-            }
-        } catch (error) {
-            console.error('Error al eliminar producto:', error);
-        }
+        document.querySelectorAll('.action-button.update').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const productId = event.target.getAttribute('data-id');
+                const product = products.find(p => p.Id_Producto === parseInt(productId));
+                if (product) {
+                    const productName = prompt('Ingrese el nombre del producto:', product.Nombre);
+                    const productDescription = prompt('Ingrese la descripción del producto:', product.Descripcion);
+                    const productPrice = prompt('Ingrese el precio del producto:', product.Precio);
+                    const productType = prompt('Ingrese el ID del tipo de producto:', product.Id_Tipo);
+                    if (productName && productDescription && productPrice && productType) {
+                        updateProduct({
+                            Id_Producto: product.Id_Producto,
+                            Nombre: productName,
+                            Descripcion: productDescription,
+                            Precio: productPrice,
+                            Id_Tipo: productType
+                        });
+                    } else {
+                        alert('Debe ingresar todos los campos.');
+                    }
+                } else {
+                    alert('Producto no encontrado.');
+                }
+            });
+        });
     };
 
     const addProduct = async (productId, productName, productDescription, productPrice, productType) => {
@@ -71,16 +81,35 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     };
 
-    // Evento para eliminar un producto
-    const deleteButton = document.getElementById('deleteButton');
-    deleteButton.addEventListener('click', () => {
-        const productId = prompt('Ingrese el ID del producto que desea eliminar:');
-        if (productId !== null && productId.trim() !== '') {
-            deleteProduct(productId);
-        } else {
-            alert('Debe ingresar un ID válido.');
+    const deleteProduct = async (productId) => {
+        const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=PRODUCTOS.DELETE&ID_PRODUCTO=${productId}`;
+        try {
+            const response = await fetch(url, { method: 'DELETE' });
+            if (response.ok) {
+                alert('Producto eliminado exitosamente.');
+                getProducts();
+            } else {
+                throw new Error('Error al eliminar producto.');
+            }
+        } catch (error) {
+            console.error('Error al eliminar producto:', error);
         }
-    });
+    };
+
+    const updateProduct = async (product) => {
+        const url = `http://localhost:8080/Xeneburguer/Controller?ACTION=PRODUCTOS.UPDATE&ID_PRODUCTO=${product.Id_Producto}&NOMBRE=${product.Nombre}&DESCRIPCION=${product.Descripcion}&PRECIO=${product.Precio}&ID_TIPO=${product.Id_Tipo}`;
+        try {
+            const response = await fetch(url, { method: 'POST' });
+            if (response.ok) {
+                alert('Producto actualizado exitosamente.');
+                getProducts();
+            } else {
+                throw new Error('Error al actualizar producto.');
+            }
+        } catch (error) {
+            console.error('Error al actualizar producto:', error);
+        }
+    };
 
     // Evento para añadir un producto
     const addButton = document.getElementById('addButton');
@@ -94,6 +123,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
             addProduct(productId, productName, productDescription, productPrice, productType);
         } else {
             alert('Debe ingresar todos los campos.');
+        }
+    });
+
+    // Evento para eliminar un producto
+    const deleteButton = document.getElementById('deleteButton');
+    deleteButton.addEventListener('click', () => {
+        const productId = prompt('Ingrese el ID del producto que desea eliminar:');
+        if (productId !== null && productId.trim() !== '') {
+            deleteProduct(productId);
+        } else {
+            alert('Debe ingresar un ID válido.');
         }
     });
 
