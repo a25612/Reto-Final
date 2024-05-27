@@ -29,34 +29,59 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
         productosContenedor.innerHTML = '';
 
-        productos.forEach(producto => {
-            if (!producto) {
-                console.error('Producto is undefined:', producto);
-                return;
+        const categorias = {
+            1: 'BEEF BURGERS',
+            2: 'CHICKEN BURGERS',
+            3: 'SPECIAL BURGERS',
+            4: 'SIDES',
+            5: 'DESSERTS',
+            6: 'DRINKS'
+        };
+    
+        // Agrupar los productos por Id_Tipo
+        const productosAgrupados = productos.reduce((acc, producto) => {
+            if (!acc[producto.Id_Tipo]) {
+                acc[producto.Id_Tipo] = [];
             }
-
-            console.log('Producto:', producto); // Verificar cada objeto producto
-
-            if (!producto.Nombre || !producto.Descripcion || producto.Precio === undefined) {
-                console.error('Producto with missing properties:', producto);
-                return;
-            }
-
-            const productoDiv = document.createElement('div');
-            productoDiv.className = 'menu-item';
-
-            const precio = producto.Precio !== undefined ? producto.Precio.toFixed(2) : '0.00';
-
-            const productoDetails = `
-                <div class="item">
-                    <h3>${producto.Nombre}</h3>
-                    <p>${producto.Descripcion}</p>
-                    <p>${precio}€ <button class="carrito" onclick="addToCart('${producto.Nombre}', ${producto.Precio})">+</button></p>
-                </div>
-            `;
-            productoDiv.innerHTML = productoDetails;
-            productosContenedor.appendChild(productoDiv);
-        });
+            acc[producto.Id_Tipo].push(producto);
+            return acc;
+        }, {});
+    
+        // Generar el HTML para cada grupo de productos
+        for (const [idTipo, productos] of Object.entries(productosAgrupados)) {
+            const tipoTitulo = document.createElement('h3');
+            tipoTitulo.textContent = categorias[idTipo] || `Tipo ${idTipo}`;
+            productosContenedor.appendChild(tipoTitulo);
+    
+            productos.forEach(producto => {
+                if (!producto) {
+                    console.error('Producto is undefined:', producto);
+                    return;
+                }
+    
+                console.log('Producto:', producto); // Verificar cada objeto producto
+    
+                if (!producto.Nombre || !producto.Descripcion || producto.Precio === undefined || !producto.Id_Tipo) {
+                    console.error('Producto with missing properties:', producto);
+                    return;
+                }
+    
+                const productoDiv = document.createElement('div');
+                productoDiv.className = 'menu-item';
+    
+                const precio = producto.Precio !== undefined ? producto.Precio.toFixed(2) : '0.00';
+    
+                const productoDetails = `
+                    <div class="item">
+                        <p>${producto.Nombre}</p>
+                        <p>${producto.Descripcion}</p>
+                        <p>${precio}€ <button class="carrito" onclick="addToCart('${producto.Nombre}', ${producto.Precio})">+</button></p>
+                    </div>
+                `;
+                productoDiv.innerHTML = productoDetails;
+                productosContenedor.appendChild(productoDiv);
+            });
+        }
     };
 
     // Llamada a la función para obtener productos
