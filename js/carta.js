@@ -1,15 +1,78 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    const getProductos = async () => {
+        const url = 'http://localhost:8080/Xeneburguer/Controller?ACTION=PRODUCTOS.FIND_ALL';
+        try {
+            const response = await fetch(url);
+            console.log('Fetching productos from:', url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const productos = await response.json();
+            console.log('Received productos:', productos); // Log the entire response
+
+            if (productos.length > 0) {
+                console.log('Sample producto structure:', productos[0]); // Log structure of the first product
+            }
+
+            displayProductos(productos);
+        } catch (error) {
+            console.error('Error fetching productos:', error);
+            alert(`Error fetching productos: ${error.message}`);
+        }
+    };
+
+    const displayProductos = (productos) => {
+        const productosContenedor = document.querySelector('#productosContenedor');
+        if (!productosContenedor) {
+            console.error("Element with id 'productosContenedor' not found.");
+            return;
+        }
+        productosContenedor.innerHTML = '';
+
+        productos.forEach(producto => {
+            if (!producto) {
+                console.error('Producto is undefined:', producto);
+                return;
+            }
+
+            console.log('Producto:', producto); // Verificar cada objeto producto
+
+            if (!producto.Nombre || !producto.Descripcion || producto.Precio === undefined) {
+                console.error('Producto with missing properties:', producto);
+                return;
+            }
+
+            const productoDiv = document.createElement('div');
+            productoDiv.className = 'menu-item';
+
+            const precio = producto.Precio !== undefined ? producto.Precio.toFixed(2) : '0.00';
+
+            const productoDetails = `
+                <div class="item">
+                    <h3>${producto.Nombre}</h3>
+                    <p>${producto.Descripcion}</p>
+                    <p>${precio}€ <button class="carrito" onclick="addToCart('${producto.Nombre}', ${producto.Precio})">+</button></p>
+                </div>
+            `;
+            productoDiv.innerHTML = productoDetails;
+            productosContenedor.appendChild(productoDiv);
+        });
+    };
+
+    // Llamada a la función para obtener productos
+    getProductos();
+});
+
 var carrito = []; // Array para almacenar los productos
 var total = 0; // Variable para almacenar el total del carrito
+var carritoVisible = false; // Estado de visibilidad del carrito
 
 // Función para mostrar el carrito si hay elementos en él
 function mostrarCarrito() {
     var carritoCampo = document.getElementById('carritoCampo');
-    if (carrito.length > 0) {
-        carritoCampo.style.display = 'block';
-    } else {
-        carritoCampo.style.display = 'none';
-    }
+    carritoCampo.style.display = carrito.length > 0 ? 'block' : 'none';
 }
+
 // Función para agregar un producto al carrito
 function addToCart(nombre, precio) {
     var index = carrito.findIndex(producto => producto.nombre === nombre);
@@ -92,24 +155,16 @@ function vaciarCarrito() {
     mostrarCarrito();
 }
 
-var carritoVisible = true; // Variable para controlar la visibilidad del carrito
-
 // Función para alternar la visibilidad del carrito y su contenedor
 function toggleCarrito() {
     var carritoCampo = document.getElementById('carritoCampo');
     var carritoContenedor = document.getElementById('carritoContenedor');
     
-    if (carritoVisible) {
-        carritoCampo.style.display = 'none'; // Ocultar el carrito
-        carritoContenedor.style.display = 'none'; // Ocultar el contenedor del carrito
-    } else {
-        carritoCampo.style.display = 'block'; // Mostrar el carrito
-        carritoContenedor.style.display = 'block'; // Mostrar el contenedor del carrito
-    }
+    carritoCampo.style.display = carritoVisible ? 'none' : 'block';
+    carritoContenedor.style.display = carritoVisible ? 'none' : 'block';
     
     carritoVisible = !carritoVisible; // Cambiar el estado de la variable
 }
-
 
 // Función para que se desplace suavemente hasta la seccion seleccionada
 function scrollToSection(sectionId) {
@@ -117,10 +172,10 @@ function scrollToSection(sectionId) {
     section.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Funcion para que el pedido minimo sea de 15€
+// Función para que el pedido mínimo sea de 15€
 function pagarCarrito() {
     if (total >= 15) {
-        // Se redirigira a la página de pago
+        // Se redirigirá a la página de pago
         window.location.href = "/html/pago.html";
     } else {
         alert('El total del pedido debe ser al menos 15€ para poder continuar');

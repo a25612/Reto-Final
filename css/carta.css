@@ -67,42 +67,6 @@ nav ul li a:hover {
 /*-----------------------------*/
 /* CARTA */
 /*--------------------------------*/
-.main-carta {
-    padding: 20px;
-}
-
-.seccion {
-    position: relative;
-    margin-right: 900px;
-}
-
-.seccion img {
-    position: absolute;
-    top: 140px;
-    right: -700px;
-    width: 500px;
-    height: auto;
-}
-
-.seccion_2 {
-    position: relative;
-    margin-left: 900px;
-}
-
-.seccion_2 img {
-    position: absolute;
-    top: 200px;
-    right: 1200px;
-    width: 550px;
-    height: auto;
-}
-.seccion img tarta{
-    position: absolute;
-    top: 140px;
-    right: -700px;
-    width: 500px;
-    height: auto;
-}
 
 h2 {
     font-size: 24px;
@@ -118,28 +82,24 @@ h2 {
 .item {
     padding: 20px;
     font-family: "Jura", sans-serif;
-    ;
 }
 
-.item h3 {
-    margin-top: 0;
-    font-size: 22px;
-    color: #ff0000;
-
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(226, 17, 17);
+    background-color: #000000;
+    padding: 5px 10px;
+    border: 2px solid rgb(226, 17, 17);
+    font-family: "Jura", sans-serif;
+    text-align: center; 
 }
-
 .item p {
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 20px;
     color: #ffffff;
+    text-align: center;
 }
-
-.item p:last-child {
-    margin-bottom: 0;
-    font-weight: bold;
-    color: #ffffff;
-}
-
 .carrito {
     background-color: red;
     color: white;
@@ -166,17 +126,6 @@ h2 {
     background-color: darkred;
 
 }
-.divcarritoCampo {
-    width: 50px;
-    display: none;
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
 .botoncarrito {
     background-color: #dd180a;
     border: none;
@@ -203,7 +152,6 @@ h2 button {
     text-align: center;
     border: none;
 }
-
 
 #totalCarrito {
     font-weight: bold;
