@@ -14,42 +14,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         if (username && email && password && phone) {
             try {
-                // Obtener el último ID de cliente
-                const urlFindAll = 'http://localhost:8080/Xeneburguer/Controller?ACTION=CLIENTES.FIND_ALL';
-                const responseFindAll = await fetch(urlFindAll);
-                if (!responseFindAll.ok) {
-                    throw new Error('Error al obtener la lista de clientes.');
-                }
-                const clientes = await responseFindAll.json();
-                console.log('Clientes:', clientes); // Depuración
-
-                // Verificar si hay clientes y que los IDs sean válidos
-                let lastId = 0;
-                if (clientes.length > 0) {
-                    const ids = clientes.map(cliente => cliente.Id_Cliente).filter(id => !isNaN(id));
-                    if (ids.length > 0) {
-                        lastId = Math.max(...ids);
-                    }
-                }
-                const nextId = lastId + 1;
+                // Asignar ID_CLIENTE manualmente
+                const nextId = 3; // Cambia este valor si es necesario
                 console.log('Next ID:', nextId); // Depuración
 
                 // Crear el nuevo cliente
                 const user = {
-                    Id_Cliente: nextId,
-                    nombre: username,
-                    email: email,
-                    password: password,
-                    telefono: phone
+                    ID_CLIENTE: nextId,
+                    NOMBRE: username,
+                    EMAIL: email,
+                    CONTRASENA: password,
+                    TELEFONO: phone
                 };
 
                 console.log('Nuevo cliente:', user); // Depuración
 
                 // Enviar solicitud para añadir el nuevo cliente
-                const urlAdd = `http://localhost:8080/Xeneburguer/Controller?ACTION=CLIENTES.ADD&ID_CLIENTE=${user.Id_Cliente}&NOMBRE=${encodeURIComponent(user.nombre)}&EMAIL=${encodeURIComponent(user.email)}&PASSWORD=${encodeURIComponent(user.password)}&TELEFONO=${encodeURIComponent(user.telefono)}`;
+                const urlAdd = `http://localhost:8080/Xeneburguer/Controller?ACTION=CLIENTES.ADD&ID_CLIENTE=${encodeURIComponent(user.ID_CLIENTE)}&NOMBRE=${encodeURIComponent(user.NOMBRE)}&EMAIL=${encodeURIComponent(user.EMAIL)}&CONTRASENA=${encodeURIComponent(user.CONTRASENA)}&TELEFONO=${encodeURIComponent(user.TELEFONO)}`;
                 console.log('URL Add:', urlAdd); // Depuración
 
-                const responseAdd = await fetch(urlAdd, { method: 'POST' });
+                const responseAdd = await fetch(urlAdd, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                });
+
                 if (responseAdd.ok) {
                     alert('Usuario registrado exitosamente.');
                     document.getElementById('register-form').reset();
@@ -67,4 +57,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
-
