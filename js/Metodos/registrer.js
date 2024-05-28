@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 if (responseAdd.ok) {
                     alert('Usuario registrado exitosamente.');
                     document.getElementById('register-form').reset();
+                    window.location.href = "/html/login.html"; 
                 } else {
                     const errorText = await responseAdd.text();
                     console.error('Error al registrar usuario:', errorText); // Depuración
