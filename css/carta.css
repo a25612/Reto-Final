@@ -199,31 +199,6 @@ h2 button {
 #listaCarrito button:hover {
     background-color: darkred; 
 }
-#menuCategorias {
-    text-align: center; 
-}
-
-#menuCategorias h2 {
-    font-size: 24px;
-    margin-bottom: 15px; 
-    color: rgb(226, 17, 17); 
-    background-color: #000000; 
-    padding: 5px 10px; 
-    border: 2px solid rgb(226, 17, 17); 
-    font-family: "Jura"; 
-    text-align: center; 
-    display: inline-block; 
-    margin-right: 100px; 
-}
-
-#menuCategorias h2 a {
-    color: inherit; 
-    text-decoration: none; 
-}
-
-#menuCategorias h2:hover {
-    background-color: darkred; 
-}
 
 /*-----------------------------*/
 /* FOOTER */

@@ -191,12 +191,6 @@ function toggleCarrito() {
     carritoVisible = !carritoVisible; // Cambiar el estado de la variable
 }
 
-// Función para que se desplace suavemente hasta la seccion seleccionada
-function scrollToSection(sectionId) {
-    var section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
-}
-
 // Función para que el pedido mínimo sea de 15€
 function pagarCarrito() {
     if (total >= 15) {
