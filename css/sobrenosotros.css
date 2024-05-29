@@ -1,0 +1,327 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Jura", sans-serif;
+}
+
+header {
+    background-color: red;
+    color: white;
+    padding: 52px;
+    text-align: center;
+}
+
+img {
+    width: 120px;
+    height: auto;
+    float: left;
+    margin-top: -50px;
+}
+
+nav {
+    display: inline-block;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 100px;
+    border: 3px solid white;
+    padding: 5px 10px;
+    border-radius: 0px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+
+
+
+}
+/*-----------------------------*/
+/* ABOUT-US */
+/*--------------------------------*/
+.main-aboutus {
+    font-family: "Jura";
+    background-image: url('/img/cocinero.png');
+    background-position: center; 
+    padding: 144px;
+    text-align: center;
+    position: relative;
+}
+
+.main-aboutus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /
+}
+
+.main-aboutus h2,
+.main-aboutus p {
+    position: relative; 
+    z-index: 1; 
+}
+
+.main-aboutus h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.main-aboutus p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.join-team{
+    font-family: "Jura";
+    background-size: cover; 
+    background-position: center; 
+    padding: 144px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.join-team h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.join-team p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.separator {
+    border: 0;
+    border-top: 2px solid #ff0000; 
+    margin: 40px 0; 
+    z-index: 1;
+    position: relative;
+}
+
+.contact-form {
+    font-family: "Jura";
+    padding: 30px;
+    border-radius: 10px;
+    margin-left: 500px;
+    margin-right: 300px;
+}
+
+.contact-form h2 {
+    margin-left: 100px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="file"] {
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #b90e0e;
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.file-info {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+/*-----------------------------*/
+/* FOOTER */
+/*--------------------------------*/
+footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-family: "Jura", sans-serif;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer nav ul p a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer nav ul p a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+footer nav ul p img {
+    width: 40px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #000000;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .main h1 {
+        font-size: 2em;
+        top: 25%;
+    }
+
+    .main button {
+        font-size: 1em;
+        top: 40%;
+    }
+
+    .main-images img {
+        width: 80%;
+    }
+
+
+    img {
+        width: 190px;
+        height: auto;
+        float: left;
+        margin-top: 50px;
+    }
+
+.contact-form {
+    margin-right: 0px;
+    margin-left: 0%;
+    }
+.contact-form h2{
+    margin-right: 90px;
+    text-align: center;
+}
+    footer nav ul p {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer .row a i {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xene Burguer Order</title>
+    <link rel="stylesheet" href="/css/order.css">
+    <script src="/js/order.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/Logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="/html/index.html">
+            <img src="/img/Logo.png" alt="Logo" style="cursor: pointer;">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/html/carta.html">MENU</a></li>
+                <li><a href="/html/order.html">ORDER</a></li>
+                <li><a href="/html/sobrenosotros.html">ABOUT US</a></li>
+                <li><a href="/html/login.html">LOG IN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-carta">
+        <div class="recuadro" id="recuadro">
+            <h2>XENE IN YOUR HOUSE</h2>
+            <div class="botones">
+                <button onclick="expandirRecuadro()">ORDER</button>
+                <button onclick="recoger()">PICK UP</button>
+            </div>
+            <div id="expansion" style="display: none;">
+                <input type="text" id="direccion" class="direccion-input" placeholder="Enter your address">
+                <button onclick="aceptarDireccion()">Aceptar</button>
+            </div>
+            <div id="direccionInput" style="display: none;">
+                <select id="restaurantes" class="direccion-input">
+                    <option value="restaurant1">Restaurante Zaragoza</option>
+                    <option value="restaurant2">Restaurante Valencia</option>
+                </select>
+                <button onclick="aceptarDireccion()">Aceptar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <div class="footer">
+                    <div class="row">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <p><a href="/html/polpriv.html">PRIVACY POLICY</a></p>
+                    <p><a href="/html/tercon.html">TERMS AND CONDITIONS</a></p>
+                    <p><a href="/html/cookies.html">COOKIES</a></p>
+                    <p><a href="/html/avileg.html">LEGAL WARNING</a></p>
+            </ul>
+            <p>©2024 XENE BURGUERS. RESERVED RIGHTS</p>
+        </nav>
+    </footer>
+</body>
+</html>

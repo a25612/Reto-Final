@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Jura", sans-serif;
+    background-color: #ff0000;
+}
+
+header {
+    background-color: red;
+    color: white;
+    padding: 52px;
+    text-align: center;
+    font-family: "Jura", sans-serif;
+}
+
+img {
+    width: 120px;
+    height: auto;
+    float: left;
+    margin-top: -50px;
+}
+
+nav {
+    display: inline-block;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 100px;
+    border: 3px solid white;
+    padding: 5px 10px;
+    border-radius: 0px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*-----------------------------*/
+/* MAIN */
+/*--------------------------------*/
+.main {
+    position: relative;
+}
+
+.main h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    font-family: "Jura", sans-serif;
+}
+
+.main button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main button:hover {
+    background-color: darkred;
+}
+
+.main button {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: "Jura", sans-serif;
+}
+
+#video-background {
+    position: static;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.main-images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-images img {
+    width: 60%;
+    height: auto;
+    margin-top: 1%;
+}
+
+.menu {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    margin-right: -20px;
+}
+
+.menu h1 {
+    font-size: 24px;
+    color: #ff0000;
+    font-family: "Jura", sans-serif;
+    
+}
+
+.menu button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jura", sans-serif;
+}
+
+.menu button:hover {
+    background-color: darkred;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.map {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.image {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.map {
+    text-align: center;
+}
+
+.image {
+    text-align: center;
+}
+
+.map h1 {
+    color: #ff0000;
+    font-size: 24px;
+    font-family: "Jura", sans-serif;
+}
+
+.map h2 {
+    color: #ff0000;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: "Jura", sans-serif;
+}
+
+.image img {
+    width: 80%; 
+    height: auto;
+    border-radius: 10px;
+    margin-left: 45px;
+    margin-top: 15px;
+}
+.linkimages img {
+    width: 126px; 
+    height: auto; 
+    margin: 0 10px; 
+    align-items: center;
+    margin-left: 20px;
+}
+
+
+/*-----------------------------*/
+/* FOOTER */
+/*--------------------------------*/
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-family: "Jura", sans-serif;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer nav ul p a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer nav ul p a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+footer nav ul p img {
+    width: 40px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #000000;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .main h1 {
+        font-size: 2em;
+        top: 25%;
+    }
+
+    .main button {
+        font-size: 1em;
+        top: 40%;
+    }
+
+    img {
+        width: 190px;
+        height: auto;
+        float: left;
+        margin-top: 50px;
+    }
+
+    .main h1 {
+        text-align: center;
+    }
+
+    .main-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-images img {
+        width: 80%;
+    }
+
+    .menu {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map, .image {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    .seccion, .seccion_2 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .seccion img, .seccion_2 img {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .linkimages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .linkimages img {
+        width: 80px;
+        margin: 10px 0;
+    }
+
+    footer nav ul p {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer .row a i {
+        font-size: 1.5em;
+    }
+}

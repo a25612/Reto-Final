@@ -1,0 +1,277 @@
+body {
+    background-image: url(/img/fondoburguers.png);
+    margin: 0;
+    padding: 0;
+    font-family: "Jura", sans-serif;
+}
+
+header {
+    background-color: red;
+    color: white;
+    padding: 52px;
+    text-align: center;
+}
+
+img {
+    width: 120px;
+    height: auto;
+    float: left;
+    margin-top: -50px;
+}
+
+nav {
+    display: inline-block;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 100px;
+    border: 3px solid white;
+    padding: 5px 10px;
+    border-radius: 0px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+/*-----------------------------*/
+/* ORDER */
+/*--------------------------------*/
+.recuadro {
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    margin-top: 150px;
+    width: 80%;
+    transition: height 0.3s ease;
+}
+
+.expanded {
+    height: 250px;
+}
+
+#expansion {
+    display: none;
+    margin-top: 35px; 
+    text-align: center; 
+}
+
+#direccionInput{
+    display: none;
+    margin-top: 35px; 
+    text-align: center; 
+}
+
+#direccionInput button{
+    background-color: #ff0000; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;  
+}
+
+.direccion-input {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#expansion button {
+    background-color: #ff0000; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+#expansion button:hover {
+    background-color: darkred; 
+}
+
+.recuadro h2 {
+    font-family: 'Jura';
+    color: #333;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botones button {
+    color: #ff0000;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console";
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #ff0000;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.botones button:hover {
+    box-shadow: inset 0 100px 0 0 #1f1d1e;
+}
+
+
+/*-----------------------------*/
+/* FOOTER */
+/*--------------------------------*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer nav ul p a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer nav ul p a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+footer nav ul p img {
+    width: 40px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #000000;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .main h1 {
+        font-size: 2em;
+        top: 25%;
+    }
+
+    .main button {
+        font-size: 1em;
+        top: 40%;
+    }
+
+    .main-images img {
+        width: 80%;
+    }
+
+
+    img {
+        width: 190px;
+        height: auto;
+        float: left;
+        margin-top: 50px;
+    }
+
+  .recuadro {
+    margin-top: 80px;
+    }
+
+    footer nav ul p {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer .row a i {
+        font-size: 1.5em;
+    }
+}

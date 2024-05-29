@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Jura", sans-serif;
+    background-image: url(/img/fondoburguers.png);
+}
+
+header {
+    background-color: red;
+    color: white;
+    padding: 52px;
+    text-align: center;
+    font-family: "Jura", sans-serif;
+}
+
+img {
+    width: 120px;
+    height: auto;
+    float: left;
+    margin-top: -50px;
+}
+
+nav {
+    display: inline-block;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 100px;
+    border: 3px solid white;
+    padding: 5px 10px;
+    border-radius: 0px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+
+
+
+}
+body {
+    background-color: #f6f5f7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: "Jura", sans-serif;
+}
+
+.container form {
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    font-family: "Jura", sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"] {
+    padding: 10px 115px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: darkred;
+}
+
+button {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff2600;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jura", sans-serif;
+}
+
+button:hover {
+    background-color: darkred;
+}
+p, h2 {
+    color: #ffffff;
+  }
+  .container a{
+    color: #f6f5f7;
+  }
+
+ /*-----------------------------*/
+/* FOOTER */
+/*--------------------------------*/
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-family: "Jura", sans-serif;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer nav ul p a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer nav ul p a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+footer nav ul p img {
+    width: 40px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #000000;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .main h1 {
+        font-size: 2em;
+        top: 25%;
+    }
+
+    .main button {
+        font-size: 1em;
+        top: 40%;
+    }
+
+    .main-images img {
+        width: 80%;
+    }
+
+
+    img {
+        width: 190px;
+        height: auto;
+        float: left;
+        margin-top: 50px;
+    }
+
+    .container{
+        margin: -38px auto;
+    }
+
+    footer nav ul p {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer .row a i {
+        font-size: 1.5em;
+    }
+}
