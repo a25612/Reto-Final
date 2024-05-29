@@ -140,7 +140,7 @@ function renderCarrito() {
         
         var cantidad = document.createElement('span'); // Contador de cantidad
         cantidad.textContent = producto.cantidad; // Establece el valor inicial
-        cantidad.style.margin = '0 5px'; // Ajusta el margen para separarlo de los botones
+        cantidad.style.margin = '0 5px';
         
         buttonMore.textContent = '+';
         buttonMore.onclick = function() {
@@ -197,6 +197,6 @@ function pagarCarrito() {
         // Se redirigirá a la página de pago
         window.location.href = "/html/pago.html";
     } else {
-        alert('El total del pedido debe ser al menos 15€ para poder continuar');
+        alert('The total of the order must be at least €15 to continue');
     }
 }
